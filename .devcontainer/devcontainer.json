@@ -1,0 +1,32 @@
+{
+  "name": "Produccion Software EMI305",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "notebook.formatOnSave.enabled": true,
+        "jupyter.notebook.defaultKernel": "Python (produccion-software-emi305)",
+        "jupyter.kernels.filter": [
+          {
+            "name": "produccion-software-emi305"
+          }
+        ]
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "postCreateCommand": "touch .welcome_flag && uv sync && uv run python -m ipykernel install --user --name produccion-software-emi305 --display-name 'Python (produccion-software-emi305)' && (codeql pack download codeql/python-queries codeql/javascript-queries codeql/java-queries || true) && (grype db update || true) && uv run python scripts/add_submodules.py",
+  "remoteUser": "vscode",
+  "runArgs": ["--name", "software-supply-chain-security-dev-container"]
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "produccion-software-emi305"
+version = "0.1.0"
+description = "Material del curso Produccion de Software EMI305"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "DCI Courses"}]
+keywords = ["course", "software-engineering", "cybersecurity", "sbom", "codeql"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "jupyterlab>=4.5.6",
+    "nbdev>=3.0.12",
+    "quarto-cli>=1.8.26",
+    "pandas>=2.0.0",
+    "ipywidgets>=8.0.0",
+    "matplotlib>=3.7.0",
+]
+
+[project.urls]
+Repository = "https://github.com/dci-courses/produccion_software_emi305"
+Documentation = "https://dci-courses.github.io/produccion_software_emi305/"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.nbdev]
+custom_sidebar = true
+title = "Produccion de Software EMI305"
