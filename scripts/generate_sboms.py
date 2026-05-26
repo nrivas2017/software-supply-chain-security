@@ -11,7 +11,7 @@ from pathlib import Path
 
 RUTA_BASE_SBOMS = Path(__file__).resolve().parents[1]
 RUTA_REPOS_POR_DEFECTO = RUTA_BASE_SBOMS / "data" / "repos"
-RUTA_RESULTADOS_POR_DEFECTO = RUTA_BASE_SBOMS / "data" / "results"
+RUTA_RESULTADOS_POR_DEFECTO = RUTA_BASE_SBOMS / "results"
 FORMATO_SALIDA_SYFT = "syft-json"
 SUFIJO_SBOM = "-sbom.json"
 SUFIJOS_LEGADOS = (".spdx.json", ".cyclonedx.json")
@@ -19,10 +19,24 @@ MENSAJE_SYFT_NO_INSTALADO = (
     "Syft CLI is not installed. Please install it (e.g., `brew install syft`)."
 )
 
-
+RUTA_LOGS = Path(__file__).resolve().parents[1] / "evidence" / "logs"
+RUTA_LOGS.mkdir(parents=True, exist_ok=True)
+ARCHIVO_LOG = RUTA_LOGS / "sboms.log"
 if not logging.getLogger().handlers:
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
+    file_handler = logging.FileHandler(ARCHIVO_LOG, encoding="utf-8")
+    console_handler = logging.StreamHandler()
+    formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
 LOGGER = logging.getLogger(__name__)
+
 PATRON_ANSI = re.compile(r"\x1b\[[0-9;?]*[ -/]*[@-~]")
 
 
@@ -46,7 +60,8 @@ class SBOMGenerator:
         )
 
         if not repositorios:
-            LOGGER.warning("No se encontraron repositorios en %s", self.repos_path)
+            LOGGER.warning(
+                "No se encontraron repositorios en %s", self.repos_path)
 
         return repositorios
 
@@ -58,7 +73,8 @@ class SBOMGenerator:
             raise FileNotFoundError(f"El repositorio no existe: {ruta_repo}")
 
         if not ruta_repo.is_dir():
-            raise NotADirectoryError(f"La ruta no es un directorio: {ruta_repo}")
+            raise NotADirectoryError(
+                f"La ruta no es un directorio: {ruta_repo}")
 
         if not any(ruta_repo.iterdir()):
             raise ValueError(f"El repositorio esta vacio: {ruta_repo}")
@@ -79,7 +95,8 @@ class SBOMGenerator:
 
         salida = self._normalizar_sbom_json(resultado.stdout)
         if not salida.strip():
-            raise RuntimeError(f"Syft no devolvio contenido para {ruta_repo.name}.")
+            raise RuntimeError(
+                f"Syft no devolvio contenido para {ruta_repo.name}.")
 
         try:
             json.loads(salida)
@@ -98,7 +115,8 @@ class SBOMGenerator:
         self.output_path.mkdir(parents=True, exist_ok=True)
         ruta_salida = self.output_path / f"{repo_name}{SUFIJO_SBOM}"
         ruta_salida.write_text(sbom_data, encoding="utf-8")
-        LOGGER.info("SBOM guardado en %s", ruta_salida.relative_to(self.project_root))
+        LOGGER.info("SBOM guardado en %s",
+                    ruta_salida.relative_to(self.project_root))
         return ruta_salida
 
     def run(self):
@@ -140,7 +158,8 @@ class SBOMGenerator:
                     omitidos += 1
                     continue
 
-                ruta_salida = self.output_path / f"{ruta_repo.name}{SUFIJO_SBOM}"
+                ruta_salida = self.output_path / \
+                    f"{ruta_repo.name}{SUFIJO_SBOM}"
                 LOGGER.info(
                     "[%s/%s] Dry-run: se generaria %s",
                     indice,
@@ -208,18 +227,19 @@ class SBOMGenerator:
         if not salida_cruda or not salida_cruda.strip():
             return ""
 
-        texto_limpio = PATRON_ANSI.sub("", salida_cruda).replace("\ufeff", "").strip()
+        texto_limpio = PATRON_ANSI.sub(
+            "", salida_cruda).replace("\ufeff", "").strip()
         candidatos = [texto_limpio]
 
         inicio_objeto = texto_limpio.find("{")
         fin_objeto = texto_limpio.rfind("}")
         if inicio_objeto != -1 and fin_objeto != -1 and inicio_objeto < fin_objeto:
-            candidatos.append(texto_limpio[inicio_objeto : fin_objeto + 1])
+            candidatos.append(texto_limpio[inicio_objeto: fin_objeto + 1])
 
         inicio_lista = texto_limpio.find("[")
         fin_lista = texto_limpio.rfind("]")
         if inicio_lista != -1 and fin_lista != -1 and inicio_lista < fin_lista:
-            candidatos.append(texto_limpio[inicio_lista : fin_lista + 1])
+            candidatos.append(texto_limpio[inicio_lista: fin_lista + 1])
 
         for candidato in candidatos:
             try:
@@ -229,7 +249,8 @@ class SBOMGenerator:
 
             return json.dumps(contenido, ensure_ascii=False, indent=2)
 
-        raise RuntimeError("Syft devolvio una salida que no pudo normalizarse a JSON valido.")
+        raise RuntimeError(
+            "Syft devolvio una salida que no pudo normalizarse a JSON valido.")
 
     def _eliminar_archivos_parciales(self, repo_name: str):
         ruta_salida = self.output_path / f"{repo_name}{SUFIJO_SBOM}"

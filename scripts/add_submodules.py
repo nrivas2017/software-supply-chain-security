@@ -2,28 +2,49 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import subprocess
 import sys
 from pathlib import Path
 
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPOS_FILE = REPO_ROOT / "data" / "repos.json"
+
+RUTA_LOGS = REPO_ROOT / "evidence" / "logs"
+RUTA_LOGS.mkdir(parents=True, exist_ok=True)
+ARCHIVO_LOG = RUTA_LOGS / "add_submodules.log"
+
+if not logging.getLogger().handlers:
+    file_handler = logging.FileHandler(ARCHIVO_LOG, encoding="utf-8")
+    console_handler = logging.StreamHandler()
+    formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
+LOGGER = logging.getLogger(__name__)
 
 
 def _run_git_command(args: list[str], cwd: Path, error_msg: str) -> bool:
     try:
-        result = subprocess.run(args, check=True, cwd=cwd, capture_output=True, text=True)
+        result = subprocess.run(args, check=True, cwd=cwd,
+                                capture_output=True, text=True)
     except FileNotFoundError:
-        print("Error: 'git' command not found. Is Git installed and in your PATH?")
+        LOGGER.error(
+            "'git' command not found. Is Git installed and in your PATH?")
         sys.exit(1)
     except subprocess.CalledProcessError as error:
         detail = error.stderr.strip() or error.stdout.strip() or str(error)
-        print(f"{error_msg}: {detail}")
+        LOGGER.error(f"{error_msg}: {detail}")
         return False
 
     if result.stdout.strip():
-        print(result.stdout.strip())
+        LOGGER.info(result.stdout.strip())
     return True
 
 
@@ -50,7 +71,8 @@ def _validate_repo_entry(repo: dict) -> tuple[str, Path, str | None]:
     path = (REPO_ROOT / raw_path).resolve()
     repos_root = (REPO_ROOT / "data" / "repos").resolve()
     if repos_root not in path.parents and path != repos_root:
-        raise ValueError(f"Repository path must stay under data/repos: {raw_path}")
+        raise ValueError(
+            f"Repository path must stay under data/repos: {raw_path}")
 
     return url, path, ref
 
@@ -62,7 +84,7 @@ def sync_repositories(
 ) -> int:
     repositories = _load_repositories(repos_file)
     if not repositories:
-        print("No repositories configured.")
+        LOGGER.warning("No repositories configured.")
         return 0
 
     errors = 0
@@ -70,7 +92,7 @@ def sync_repositories(
         try:
             url, path, ref = _validate_repo_entry(repo)
         except ValueError as error:
-            print(error)
+            LOGGER.error(error)
             errors += 1
             continue
 
@@ -78,18 +100,19 @@ def sync_repositories(
         path_exists = path.exists()
         path_is_empty = path_exists and path.is_dir() and not any(path.iterdir())
         if not path_exists or path_is_empty:
-            print(f"Cloning {url} into {path.relative_to(REPO_ROOT)}")
+            LOGGER.info(f"Cloning {url} into {path.relative_to(REPO_ROOT)}")
             if dry_run:
                 continue
             if not _run_git_command(["git", "clone", url, str(path)], REPO_ROOT, f"Failed to clone {url}"):
                 errors += 1
                 continue
         elif not (path / ".git").exists():
-            print(f"Skipping {path.relative_to(REPO_ROOT)}: directory exists but is not a Git repository.")
+            LOGGER.warning(
+                f"Skipping {path.relative_to(REPO_ROOT)}: directory exists but is not a Git repository.")
             errors += 1
             continue
         elif update:
-            print(f"Updating {path.relative_to(REPO_ROOT)}")
+            LOGGER.info(f"Updating {path.relative_to(REPO_ROOT)}")
             if dry_run:
                 continue
             if not _run_git_command(["git", "fetch", "--all", "--prune"], path, f"Failed to fetch {path.name}"):
@@ -97,17 +120,17 @@ def sync_repositories(
                 continue
 
         if ref:
-            print(f"Checking out {ref} in {path.relative_to(REPO_ROOT)}")
+            LOGGER.info(f"Checking out {ref} in {path.relative_to(REPO_ROOT)}")
             if dry_run:
                 continue
             if not _run_git_command(["git", "checkout", ref], path, f"Failed to checkout {ref} in {path.name}"):
                 errors += 1
 
     if errors:
-        print(f"Repository sync finished with {errors} error(s).")
+        LOGGER.warning(f"Repository sync finished with {errors} error(s).")
         return 1
 
-    print("Repository sync complete.")
+    LOGGER.info("Repository sync complete.")
     return 0
 
 
@@ -140,7 +163,7 @@ def main() -> int:
     try:
         return sync_repositories(args.repos_file, update=not args.no_update, dry_run=args.dry_run)
     except Exception as error:
-        print(f"Error: {error}")
+        LOGGER.error(f"Error: {error}")
         return 1
 
 

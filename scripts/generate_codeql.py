@@ -42,7 +42,7 @@ from pathlib import Path
 
 RUTA_BASE_CODEQL = Path(__file__).resolve().parents[1]
 RUTA_REPOS_POR_DEFECTO = RUTA_BASE_CODEQL / "data" / "repos"
-RUTA_RESULTADOS_POR_DEFECTO = RUTA_BASE_CODEQL / "data" / "results"
+RUTA_RESULTADOS_POR_DEFECTO = RUTA_BASE_CODEQL / "results"
 SUFIJO_CODEQL = "-codeql.json"
 FORMATO_SALIDA_CODEQL = "sarifv2.1.0"
 MENSAJE_CODEQL_NO_INSTALADO = (
@@ -50,10 +50,23 @@ MENSAJE_CODEQL_NO_INSTALADO = (
     "https://github.com/github/codeql-cli-binaries/releases"
 )
 
-
+RUTA_LOGS = Path(__file__).resolve().parents[1] / "evidence" / "logs"
+RUTA_LOGS.mkdir(parents=True, exist_ok=True)
+ARCHIVO_LOG = RUTA_LOGS / "codeql.log"
 if not logging.getLogger().handlers:
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
+    file_handler = logging.FileHandler(ARCHIVO_LOG, encoding="utf-8")
+    console_handler = logging.StreamHandler()
+    formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+    
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
 LOGGER = logging.getLogger(__name__)
+
 PATRON_ANSI = re.compile(r"\x1b\[[0-9;?]*[ -/]*[@-~]")
 
 
