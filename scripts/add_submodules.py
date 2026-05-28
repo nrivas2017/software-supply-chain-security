@@ -5,6 +5,7 @@ import json
 import logging
 import subprocess
 import sys
+import io
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -39,15 +40,13 @@ def _run_git_command(args: list[str], cwd: Path, error_msg: str) -> bool:
             args,
             cwd=str(cwd),
             stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            encoding="utf-8",
-            bufsize=1,
-            newline=''
+            stderr=subprocess.STDOUT
         ) as process:
 
             if process.stdout is not None:
-                for line in process.stdout:
+                stream = io.TextIOWrapper(
+                    process.stdout, encoding="utf-8", newline='')
+                for line in stream:
                     print(line, end="", flush=True)
 
             process.wait()
