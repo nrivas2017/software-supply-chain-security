@@ -1,4 +1,6 @@
 .venv
+*.egg-info/
+__pycache__/
 .welcome_flag
 data/repos/
 
