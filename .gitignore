@@ -1,3 +1,7 @@
 .venv
 .welcome_flag
 data/repos/
+
+# -- temp --
+evidence/
+results/
