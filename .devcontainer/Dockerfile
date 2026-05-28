@@ -24,6 +24,13 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Go and build tools (required for CodeQL Go analysis)
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential \
+    && curl -sL https://go.dev/dl/go1.22.3.linux-amd64.tar.gz | tar -xz -C /usr/local \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+ENV PATH=$PATH:/usr/local/go/bin
+
 # Install CodeQL CLI
 RUN curl -sSfL https://github.com/github/codeql-cli-binaries/releases/download/v2.25.1/codeql-linux64.zip -o /tmp/codeql.zip \
     && unzip -q /tmp/codeql.zip -d /usr/local \
@@ -42,7 +49,8 @@ RUN codeql pack download codeql/python-queries \
 RUN echo "CodeQL version:" && codeql version \
     && echo "Grype version:" && grype version \
     && echo "Node.js version:" && node --version \
-    && echo "npm version:" && npm --version
+    && echo "npm version:" && npm --version \
+    && echo "Go version:" && go version
 
 # Set environment variables for uv
 ENV UV_LINK_MODE=copy
