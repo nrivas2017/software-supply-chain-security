@@ -31,21 +31,42 @@ LOGGER = logging.getLogger(__name__)
 
 
 def _run_git_command(args: list[str], cwd: Path, error_msg: str) -> bool:
+    if len(args) > 1 and args[1] in ["clone", "fetch"] and "--progress" not in args:
+        args.append("--progress")
+
     try:
-        result = subprocess.run(args, check=True, cwd=cwd,
-                                capture_output=True, text=True)
+        with subprocess.Popen(
+            args,
+            cwd=str(cwd),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding="utf-8",
+            bufsize=1,
+            newline=''
+        ) as process:
+
+            if process.stdout is not None:
+                for line in process.stdout:
+                    print(line, end="", flush=True)
+
+            process.wait()
+            print()
+
+            if process.returncode != 0:
+                LOGGER.error(
+                    f"{error_msg} (Código de salida: {process.returncode})")
+                return False
+
+        return True
+
     except FileNotFoundError:
         LOGGER.error(
             "'git' command not found. Is Git installed and in your PATH?")
         sys.exit(1)
-    except subprocess.CalledProcessError as error:
-        detail = error.stderr.strip() or error.stdout.strip() or str(error)
-        LOGGER.error(f"{error_msg}: {detail}")
+    except Exception as error:
+        LOGGER.error(f"{error_msg}: {str(error)}")
         return False
-
-    if result.stdout.strip():
-        LOGGER.info(result.stdout.strip())
-    return True
 
 
 def _load_repositories(repos_file: Path) -> list[dict]:
