@@ -1,13 +1,28 @@
 {
   "repositories": [
     {
-      "url": "https://github.com/anthropics/claude-code-action.git",
-      "path": "data/repos/claude-code-action",
+      "url": "https://github.com/mastodon/mastodon",
+      "path": "data/repos/mastodon",
       "ref": null
     },
     {
-      "url": "https://github.com/cirolini/genai-code-review.git",
-      "path": "data/repos/genai-code-review",
+      "url": "https://github.com/apache/superset",
+      "path": "data/repos/apache-superset",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/TryGhost/Ghost",
+      "path": "data/repos/Ghost",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/go-gitea/gitea",
+      "path": "data/repos/gitea",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/hoppscotch/hoppscotch",
+      "path": "data/repos/hoppscotch",
       "ref": null
     }
   ]
