@@ -24,6 +24,26 @@
       "url": "https://github.com/hoppscotch/hoppscotch",
       "path": "data/repos/hoppscotch",
       "ref": null
+    },
+    {
+      "url": "https://github.com/requarks/wiki",
+      "path": "data/repos/wiki",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/ZoneMinder/zoneminder",
+      "path": "data/repos/zoneminder",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/librenms/librenms",
+      "path": "data/repos/librenms",
+      "ref": null
+    },
+    {
+      "url": "https://github.com/grokability/snipe-it",
+      "path": "data/repos/snipe-it",
+      "ref": null
     }
   ]
 }
