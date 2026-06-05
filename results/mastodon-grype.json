@@ -1,0 +1,203 @@
+{
+  "total_vulnerabilities": 17,
+  "vulnerabilities_by_severity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 17
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "fast-uri",
+      "current_version": "3.0.6",
+      "vuln_id": "GHSA-q3j6-qgpj-74h6",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "fast-uri vulnerable to path traversal via percent-encoded dot segments",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "picomatch",
+      "current_version": "2.3.1",
+      "vuln_id": "GHSA-3v7f-55p6-f55p",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "qs",
+      "current_version": "6.14.0",
+      "vuln_id": "GHSA-q8mj-m7cp-5q26",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "qs",
+      "current_version": "6.14.0",
+      "vuln_id": "GHSA-6rw7-vpxm-498p",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-34x7-hfp2-rc4v",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "qs",
+      "current_version": "6.14.0",
+      "vuln_id": "GHSA-w7fw-mjwx-w883",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "qs's arrayLimit bypass in comma parsing allows denial of service",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "picomatch",
+      "current_version": "2.3.1",
+      "vuln_id": "GHSA-c2c7-rcm5-vvqj",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "brace-expansion",
+      "current_version": "1.1.12",
+      "vuln_id": "GHSA-f886-m6hf-6m8v",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-8qq5-rm4j-mr97",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "fast-uri",
+      "current_version": "3.0.6",
+      "vuln_id": "GHSA-v39h-62p7-jpjc",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "ajv",
+      "current_version": "8.17.1",
+      "vuln_id": "GHSA-2g4f-4pwh-qvx6",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "ajv has ReDoS when using `$data` option",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-r6q2-hw4h-h46w",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-9ppj-qmqm-q256",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "node-tar Symlink Path Traversal via Drive-Relative Linkpath",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-qffp-2rhf-9h96",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "ip-address",
+      "current_version": "10.0.1",
+      "vuln_id": "GHSA-v2v4-37r5-5v8g",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "ip-address has XSS in Address6 HTML-emitting methods",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "tar",
+      "current_version": "7.4.3",
+      "vuln_id": "GHSA-83g3-92jg-28cx",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jwt",
+      "current_version": "2.10.3",
+      "vuln_id": "GHSA-c32j-vqhx-rx3x",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "ruby-jwt: Empty-key HMAC bypass; cross-language sibling of CVE-2026-44351",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/software-supply-chain-security/data/repos/mastodon"
+  }
+}

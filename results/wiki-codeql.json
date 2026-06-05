@@ -1,0 +1,222 @@
+{
+  "total_issues": 14,
+  "issues_by_severity": {
+    "error": 0,
+    "warning": 14,
+    "note": 0
+  },
+  "issues": [
+    {
+      "rule_id": "js/clear-text-cookie",
+      "rule_index": 9,
+      "level": "warning",
+      "message": "Sensitive cookie sent without enforcing SSL encryption.",
+      "file": "server/master.js",
+      "region": {
+        "startLine": 79,
+        "startColumn": 11,
+        "endLine": 86,
+        "endColumn": 5
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "rule_index": 16,
+      "level": "warning",
+      "message": "This replaces only the first occurrence of /\\[\\x00- ... <>:*?\\]/.",
+      "file": "server/helpers/page.js",
+      "region": {
+        "startLine": 36,
+        "startColumn": 15,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "client/components/editor/editor-markdown.vue",
+      "region": {
+        "startLine": 593,
+        "startColumn": 27,
+        "endColumn": 125
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-rate-limiting",
+      "rule_index": 48,
+      "level": "warning",
+      "message": "This route handler performs [authorization](1), but is not rate-limited.",
+      "file": "server/controllers/auth.js",
+      "region": {
+        "startLine": 53,
+        "startColumn": 32,
+        "endLine": 61,
+        "endColumn": 2
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-rate-limiting",
+      "rule_index": 48,
+      "level": "warning",
+      "message": "This route handler performs [authorization](1), but is not rate-limited.",
+      "file": "server/controllers/auth.js",
+      "region": {
+        "startLine": 66,
+        "startColumn": 41,
+        "endLine": 96,
+        "endColumn": 2
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-rate-limiting",
+      "rule_index": 48,
+      "level": "warning",
+      "message": "This route handler performs [a file system access](1), but is not rate-limited.",
+      "file": "server/setup.js",
+      "region": {
+        "startLine": 68,
+        "startColumn": 16,
+        "endLine": 71,
+        "endColumn": 4
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-rate-limiting",
+      "rule_index": 48,
+      "level": "warning",
+      "message": "This route handler performs [a file system access](1), but is not rate-limited.\nThis route handler performs [a file system access](2), but is not rate-limited.\nThis route handler performs [a file system access](3), but is not rate-limited.",
+      "file": "server/setup.js",
+      "region": {
+        "startLine": 76,
+        "startColumn": 25,
+        "endLine": 376,
+        "endColumn": 4
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/type-confusion-through-parameter-tampering",
+      "rule_index": 50,
+      "level": "warning",
+      "message": "Potential type confusion as [this HTTP request parameter](1) may be either an array or a string.",
+      "file": "server/controllers/common.js",
+      "region": {
+        "startLine": 192,
+        "startColumn": 11,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/stack-trace-exposure",
+      "rule_index": 83,
+      "level": "warning",
+      "message": "This information exposed to the user depends on [stack trace information](1).",
+      "file": "server/controllers/auth.js",
+      "region": {
+        "startLine": 116,
+        "startColumn": 9,
+        "endColumn": 12
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/regex/unmatchable-dollar",
+      "rule_index": 129,
+      "level": "warning",
+      "message": "This assertion can never match.",
+      "file": "server/modules/rendering/markdown-katex/mhchem.js",
+      "region": {
+        "startLine": 237,
+        "startColumn": 60,
+        "endColumn": 61
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'newValue' always evaluates to true.",
+      "file": "client/components/common/search-results.vue",
+      "region": {
+        "startLine": 103,
+        "startColumn": 25,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of platform is unused, since it is always overwritten.",
+      "file": "server/core/telemetry.js",
+      "region": {
+        "startLine": 34,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable qs.",
+      "file": "server/controllers/ssl.js",
+      "region": {
+        "startLine": 4,
+        "startColumn": 7,
+        "endColumn": 9
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable gte.",
+      "file": "server/index.js",
+      "region": {
+        "startLine": 9,
+        "startColumn": 9,
+        "endColumn": 12
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    }
+  ],
+  "sarif_metadata": {
+    "version": "2.1.0",
+    "schema_uri": "https://json.schemastore.org/sarif-2.1.0.json",
+    "tool": {
+      "name": "CodeQL",
+      "version": "unknown",
+      "information_uri": ""
+    },
+    "tool_name": "CodeQL",
+    "tool_version": "unknown"
+  }
+}

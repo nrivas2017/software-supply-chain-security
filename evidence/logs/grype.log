@@ -1,0 +1,91 @@
+2026-05-30 00:21:45 | INFO | === Grype Environment Diagnostics ===
+2026-05-30 00:21:45 | INFO | Grype CLI: Application:         grype
+Version:             0.112.0
+BuildDate:           2026-05-01T18:57:12Z
+GitCommit:           244f2a10a5668078fcf771454bbd832b3a5b9e8a
+GitDescription:      v0.112.0
+Platform:            linux/amd64
+GoVersion:           go1.26.2
+Compiler:            gc
+Syft Version:        v1.44.0
+Supported DB Schema: 6
+2026-05-30 00:21:46 | INFO | Grype DB status: Path:      /home/vscode/.cache/grype/db/6/vulnerability.db
+Schema:    v6.1.4
+Built:     2026-05-28T07:43:55Z
+From:      https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.4_2026-05-28T00:47:44Z_1779954235.tar.zst?checksum=sha256%3A789f90f03f9c32bef199e9b04cdf766024da51e933b07fcc7f87279cd8283d81
+Status:    valid
+2026-05-30 00:21:46 | INFO | === Environment Check Complete ===
+
+2026-05-30 00:21:46 | INFO | [1/9] Scanning data/repos/Ghost with Grype...
+2026-05-30 00:22:39 | INFO | Manifests found in Ghost: package-lock.json, package.json
+2026-05-30 00:22:39 | INFO | Running Grype on Ghost...
+2026-05-30 00:28:14 | INFO | Parsing Grype output...
+2026-05-30 00:28:14 | INFO | Found 37 matches in Grype output
+2026-05-30 00:28:14 | INFO | Parsed 37 vulnerabilities total
+2026-05-30 00:28:14 | INFO | Raw Grype output saved to results/Ghost-grype-raw.json
+2026-05-30 00:28:14 | INFO | Normalized analysis saved to results/Ghost-grype.json
+2026-05-30 00:28:14 | INFO | [2/9] Scanning data/repos/apache-superset with Grype...
+2026-05-30 00:29:46 | INFO | Manifests found in apache-superset: package-lock.json, package.json, requirements.txt, yarn.lock
+2026-05-30 00:29:46 | INFO | Running Grype on apache-superset...
+2026-05-30 00:36:09 | INFO | Parsing Grype output...
+2026-05-30 00:36:09 | INFO | Found 25 matches in Grype output
+2026-05-30 00:36:09 | INFO | Parsed 25 vulnerabilities total
+2026-05-30 00:36:09 | INFO | Raw Grype output saved to results/apache-superset-grype-raw.json
+2026-05-30 00:36:09 | INFO | Normalized analysis saved to results/apache-superset-grype.json
+2026-05-30 00:36:09 | INFO | [3/9] Scanning data/repos/gitea with Grype...
+2026-05-30 00:36:49 | INFO | Manifests found in gitea: go.mod, go.sum, package.json
+2026-05-30 00:36:49 | INFO | Running Grype on gitea...
+2026-05-30 00:41:45 | INFO | Parsing Grype output...
+2026-05-30 00:41:45 | INFO | Found 4 matches in Grype output
+2026-05-30 00:41:45 | INFO | Parsed 4 vulnerabilities total
+2026-05-30 00:41:45 | INFO | Raw Grype output saved to results/gitea-grype-raw.json
+2026-05-30 00:41:45 | INFO | Normalized analysis saved to results/gitea-grype.json
+2026-05-30 00:41:45 | INFO | [4/9] Scanning data/repos/hoppscotch with Grype...
+2026-05-30 00:42:05 | INFO | Manifests found in hoppscotch: Cargo.lock, Cargo.toml, go.mod, go.sum, package.json
+2026-05-30 00:42:05 | INFO | Running Grype on hoppscotch...
+2026-05-30 00:44:07 | INFO | Parsing Grype output...
+2026-05-30 00:44:07 | INFO | Found 185 matches in Grype output
+2026-05-30 00:44:08 | INFO | Parsed 185 vulnerabilities total
+2026-05-30 00:44:08 | INFO | Raw Grype output saved to results/hoppscotch-grype-raw.json
+2026-05-30 00:44:09 | INFO | Normalized analysis saved to results/hoppscotch-grype.json
+2026-05-30 00:44:09 | INFO | [5/9] Scanning data/repos/librenms with Grype...
+2026-05-30 00:45:37 | INFO | Manifests found in librenms: package-lock.json, package.json, requirements.txt
+2026-05-30 00:45:37 | INFO | Running Grype on librenms...
+2026-05-30 00:57:19 | INFO | Parsing Grype output...
+2026-05-30 00:57:19 | INFO | Found 2 matches in Grype output
+2026-05-30 00:57:19 | INFO | Parsed 2 vulnerabilities total
+2026-05-30 00:57:20 | INFO | Raw Grype output saved to results/librenms-grype-raw.json
+2026-05-30 00:57:20 | INFO | Normalized analysis saved to results/librenms-grype.json
+2026-05-30 00:57:20 | INFO | [6/9] Scanning data/repos/mastodon with Grype...
+2026-05-30 00:58:05 | INFO | Manifests found in mastodon: Gemfile, Gemfile.lock, package.json, yarn.lock
+2026-05-30 00:58:05 | INFO | Running Grype on mastodon...
+2026-05-30 01:03:27 | INFO | Parsing Grype output...
+2026-05-30 01:03:27 | INFO | Found 17 matches in Grype output
+2026-05-30 01:03:27 | INFO | Parsed 17 vulnerabilities total
+2026-05-30 01:03:27 | INFO | Raw Grype output saved to results/mastodon-grype-raw.json
+2026-05-30 01:03:27 | INFO | Normalized analysis saved to results/mastodon-grype.json
+2026-05-30 01:03:27 | INFO | [7/9] Scanning data/repos/snipe-it with Grype...
+2026-05-30 01:04:46 | INFO | Manifests found in snipe-it: package-lock.json, package.json
+2026-05-30 01:04:46 | INFO | Running Grype on snipe-it...
+2026-05-30 01:12:15 | INFO | Parsing Grype output...
+2026-05-30 01:12:15 | INFO | Found 54 matches in Grype output
+2026-05-30 01:12:15 | INFO | Parsed 54 vulnerabilities total
+2026-05-30 01:12:15 | INFO | Raw Grype output saved to results/snipe-it-grype-raw.json
+2026-05-30 01:12:15 | INFO | Normalized analysis saved to results/snipe-it-grype.json
+2026-05-30 01:12:15 | INFO | [8/9] Scanning data/repos/wiki with Grype...
+2026-05-30 01:12:20 | INFO | Manifests found in wiki: package.json, yarn.lock
+2026-05-30 01:12:20 | INFO | Running Grype on wiki...
+2026-05-30 01:12:58 | INFO | Parsing Grype output...
+2026-05-30 01:12:58 | INFO | Found 372 matches in Grype output
+2026-05-30 01:12:58 | INFO | Parsed 372 vulnerabilities total
+2026-05-30 01:12:58 | INFO | Raw Grype output saved to results/wiki-grype-raw.json
+2026-05-30 01:12:58 | INFO | Normalized analysis saved to results/wiki-grype.json
+2026-05-30 01:12:58 | INFO | [9/9] Scanning data/repos/zoneminder with Grype...
+2026-05-30 01:13:39 | INFO | Manifests found in zoneminder: package.json, requirements.txt
+2026-05-30 01:13:39 | INFO | Running Grype on zoneminder...
+2026-05-30 01:17:43 | INFO | Parsing Grype output...
+2026-05-30 01:17:43 | INFO | Found 0 matches in Grype output
+2026-05-30 01:17:43 | INFO | Parsed 0 vulnerabilities total
+2026-05-30 01:17:43 | INFO | Raw Grype output saved to results/zoneminder-grype-raw.json
+2026-05-30 01:17:43 | INFO | Normalized analysis saved to results/zoneminder-grype.json
+2026-05-30 01:17:43 | INFO | Summary | total_repos=9 | repos_scanned=9 | files_generated=18 | skipped=0 | errors=0

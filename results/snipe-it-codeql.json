@@ -1,0 +1,3524 @@
+{
+  "total_issues": 250,
+  "issues_by_severity": {
+    "error": 0,
+    "warning": 250,
+    "note": 0
+  },
+  "issues": [
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15589,
+        "startColumn": 15,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16563,
+        "startColumn": 17,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14819,
+        "startColumn": 15,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 15130,
+        "startColumn": 17,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 152,
+        "startColumn": 77,
+        "endColumn": 117
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 602,
+        "startColumn": 23,
+        "endColumn": 50
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "rule_index": 66,
+      "level": "warning",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "file": "resources/assets/js/extensions/pGenerator.jquery.js",
+      "region": {
+        "startLine": 135,
+        "startColumn": 24,
+        "endColumn": 50
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 14288,
+        "startColumn": 20,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 14290,
+        "startColumn": 13,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 14303,
+        "startColumn": 12,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14724,
+        "startColumn": 22,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14726,
+        "startColumn": 15,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14739,
+        "startColumn": 14,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 13518,
+        "startColumn": 20,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 13520,
+        "startColumn": 13,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 13533,
+        "startColumn": 12,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13309,
+        "startColumn": 22,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13311,
+        "startColumn": 15,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "rule_index": 88,
+      "level": "warning",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13324,
+        "startColumn": 15,
+        "endColumn": 18
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/empty-password-in-configuration-file",
+      "rule_index": 97,
+      "level": "warning",
+      "message": "Empty password in configuration file.",
+      "file": "ansible/ubuntu/vagrant_playbook.yml",
+      "region": {
+        "startLine": 199,
+        "startColumn": 21,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/redundant-assignment",
+      "rule_index": 102,
+      "level": "warning",
+      "message": "This expression assigns property get to itself.",
+      "file": "resources/assets/js/bootstrap-table-reorder-columns.js",
+      "region": {
+        "startLine": 826,
+        "startColumn": 9,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/redundant-assignment",
+      "rule_index": 102,
+      "level": "warning",
+      "message": "This expression assigns property set to itself.",
+      "file": "resources/assets/js/bootstrap-table-reorder-columns.js",
+      "region": {
+        "startLine": 828,
+        "startColumn": 9,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/implicit-operand-conversion",
+      "rule_index": 103,
+      "level": "warning",
+      "message": "This expression will be implicitly converted from boolean to number or string.",
+      "file": "resources/assets/js/dragtable.js",
+      "region": {
+        "startLine": 303,
+        "startColumn": 16,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7478,
+        "startColumn": 36,
+        "endColumn": 47
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7483,
+        "startColumn": 15,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 12178,
+        "startColumn": 5,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 12179,
+        "startColumn": 5,
+        "endColumn": 14
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 7268,
+        "startColumn": 7,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 7269,
+        "startColumn": 7,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6708,
+        "startColumn": 36,
+        "endColumn": 47
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6713,
+        "startColumn": 15,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 11408,
+        "startColumn": 5,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 11409,
+        "startColumn": 5,
+        "endColumn": 14
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 5855,
+        "startColumn": 7,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 5856,
+        "startColumn": 7,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 4958,
+        "startColumn": 26,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 4958,
+        "startColumn": 43,
+        "endColumn": 58
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6679,
+        "startColumn": 19,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7704,
+        "startColumn": 33,
+        "endColumn": 45
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 8159,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 8312,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 8549,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 8938,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8359,
+        "startColumn": 20,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8359,
+        "startColumn": 37,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8983,
+        "startColumn": 16,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8983,
+        "startColumn": 40,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8984,
+        "startColumn": 22,
+        "endColumn": 42
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8984,
+        "startColumn": 46,
+        "endColumn": 68
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 10089,
+        "startColumn": 9,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 12321,
+        "startColumn": 31,
+        "endColumn": 43
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 12722,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 12875,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 13112,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 13501,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 4188,
+        "startColumn": 26,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 4188,
+        "startColumn": 43,
+        "endColumn": 58
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 5909,
+        "startColumn": 19,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6934,
+        "startColumn": 33,
+        "endColumn": 45
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 7389,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 7542,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 7779,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8168,
+        "startColumn": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 6946,
+        "startColumn": 20,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 6946,
+        "startColumn": 37,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7570,
+        "startColumn": 16,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7570,
+        "startColumn": 40,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7571,
+        "startColumn": 22,
+        "endColumn": 42
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7571,
+        "startColumn": 46,
+        "endColumn": 68
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 8676,
+        "startColumn": 9,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 10908,
+        "startColumn": 31,
+        "endColumn": 43
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 11309,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 11462,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 11699,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unneeded-defensive-code",
+      "rule_index": 118,
+      "level": "warning",
+      "message": "This guard always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 12088,
+        "startColumn": 9,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/misleading-indentation-after-control-statement",
+      "rule_index": 146,
+      "level": "warning",
+      "message": "The indentation of this statement suggests that it is controlled by [this statement](1), while in fact it is not.",
+      "file": "resources/assets/js/bootstrap-table-reorder-columns.js",
+      "region": {
+        "startLine": 502,
+        "startColumn": 11,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 463,
+        "startColumn": 20,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 1308,
+        "startColumn": 20,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 464,
+        "startColumn": 22,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 1309,
+        "startColumn": 22,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 463,
+        "startColumn": 20,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unreachable-statement",
+      "rule_index": 149,
+      "level": "warning",
+      "message": "This statement is unreachable.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 1308,
+        "startColumn": 20,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 5993,
+        "startColumn": 30,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'm2' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7196,
+        "startColumn": 23,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9534,
+        "startColumn": 26,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9541,
+        "startColumn": 29,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9646,
+        "startColumn": 23,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'expression' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 14478,
+        "startColumn": 3,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 9383,
+        "startColumn": 24,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'elLastChild' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 11489,
+        "startColumn": 20,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14882,
+        "startColumn": 24,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14889,
+        "startColumn": 27,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14994,
+        "startColumn": 21,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'expression' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 15452,
+        "startColumn": 3,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 5223,
+        "startColumn": 30,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'm2' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6426,
+        "startColumn": 23,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8764,
+        "startColumn": 26,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8771,
+        "startColumn": 29,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8876,
+        "startColumn": 23,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'expression' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 13708,
+        "startColumn": 3,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7970,
+        "startColumn": 24,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'elLastChild' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 10076,
+        "startColumn": 20,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This negation always evaluates to false.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13467,
+        "startColumn": 24,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13474,
+        "startColumn": 27,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'currentTo' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13579,
+        "startColumn": 21,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'expression' always evaluates to true.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14029,
+        "startColumn": 3,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'DESCRIPTORS$4' always evaluates to true.",
+      "file": "resources/assets/js/bootstrap-table-reorder-columns.js",
+      "region": {
+        "startLine": 755,
+        "startColumn": 54,
+        "endColumn": 67
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable searchElement is used like a local variable, but is missing a declaration.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 247,
+        "startColumn": 3,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable value is used like a local variable, but is missing a declaration.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 657,
+        "startColumn": 5,
+        "endColumn": 10
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable area is used like a local variable, but is missing a declaration.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 658,
+        "startColumn": 5,
+        "endColumn": 9
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable msg is used like a local variable, but is missing a declaration.",
+      "file": "resources/assets/js/snipeit_modals.js",
+      "region": {
+        "startLine": 158,
+        "startColumn": 13,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to t here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6637,
+        "startColumn": 155,
+        "endColumn": 168
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to e2 here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6759,
+        "startColumn": 18,
+        "endColumn": 88
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to c2 here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7077,
+        "startColumn": 375,
+        "endColumn": 409
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to c2 here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7109,
+        "startColumn": 28,
+        "endLine": 7112,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to n3 here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7217,
+        "startColumn": 28,
+        "endColumn": 41
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to e2 here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7337,
+        "startColumn": 14,
+        "endColumn": 59
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to fromKey here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9633,
+        "startColumn": 17,
+        "endColumn": 54
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to fromKey here is unused.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 14981,
+        "startColumn": 15,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to t here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 5867,
+        "startColumn": 155,
+        "endColumn": 168
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to e2 here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 5989,
+        "startColumn": 18,
+        "endColumn": 88
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to c2 here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6307,
+        "startColumn": 375,
+        "endColumn": 409
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to c2 here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6339,
+        "startColumn": 28,
+        "endLine": 6342,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to n3 here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6447,
+        "startColumn": 28,
+        "endColumn": 41
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to e2 here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6567,
+        "startColumn": 14,
+        "endColumn": 59
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to fromKey here is unused.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8863,
+        "startColumn": 17,
+        "endColumn": 54
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to fromKey here is unused.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 13566,
+        "startColumn": 15,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable i2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6840,
+        "startColumn": 44,
+        "endColumn": 53
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable e2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7159,
+        "startColumn": 193,
+        "endColumn": 215
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable a2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7159,
+        "startColumn": 217,
+        "endColumn": 305
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable l2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7159,
+        "startColumn": 307,
+        "endColumn": 395
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable p2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 232,
+        "endColumn": 249
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable D2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 251,
+        "endColumn": 609
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable T2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 611,
+        "endColumn": 699
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable p2 has already [been previously declared](1).\nVariable p2 has already [been previously declared](2).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 701,
+        "endColumn": 789
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable i2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6070,
+        "startColumn": 44,
+        "endColumn": 53
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable e2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6389,
+        "startColumn": 193,
+        "endColumn": 215
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable a2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6389,
+        "startColumn": 217,
+        "endColumn": 305
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable l2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6389,
+        "startColumn": 307,
+        "endColumn": 395
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable p2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 232,
+        "endColumn": 249
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable D2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 251,
+        "endColumn": 609
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable T2 has already [been previously declared](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 611,
+        "endColumn": 699
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/duplicate-variable-declaration",
+      "rule_index": 159,
+      "level": "warning",
+      "message": "Variable p2 has already [been previously declared](1).\nVariable p2 has already [been previously declared](2).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 701,
+        "endColumn": 789
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-property",
+      "rule_index": 160,
+      "level": "warning",
+      "message": "This write to property 'prototype' is useless, since [another property write](1) always overrides it.",
+      "file": "resources/assets/js/bootstrap-table-reorder-columns.js",
+      "region": {
+        "startLine": 60,
+        "startColumn": 9,
+        "endLine": 66,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable placement.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9067,
+        "startColumn": 17,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable offsetValue.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 9067,
+        "startColumn": 28,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable meta.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 10217,
+        "startColumn": 7,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable isScoped.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 12440,
+        "startColumn": 7,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable snapshot.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 12818,
+        "startColumn": 38,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable findComponentByElId.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 14844,
+        "startColumn": 13,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s1.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15101,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable signature.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15102,
+        "startColumn": 9,
+        "endColumn": 18
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s2.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15104,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s3.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15106,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable directive2.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15224,
+        "startColumn": 24,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable hasEphemeralTriggers.",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 15941,
+        "startColumn": 7,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable meta.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 5307,
+        "startColumn": 9,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable isScoped.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 7530,
+        "startColumn": 9,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable snapshot.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 7908,
+        "startColumn": 40,
+        "endColumn": 48
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable placement.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 13630,
+        "startColumn": 15,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable offsetValue.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 13630,
+        "startColumn": 26,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable findComponentByElId.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 15818,
+        "startColumn": 15,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s1.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16075,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable signature.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16076,
+        "startColumn": 11,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s2.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16078,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s3.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16080,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable directive2.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16198,
+        "startColumn": 26,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable hasEphemeralTriggers.",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 16915,
+        "startColumn": 9,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable placement.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8297,
+        "startColumn": 17,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable offsetValue.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 8297,
+        "startColumn": 28,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable meta.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 9447,
+        "startColumn": 7,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable isScoped.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 11670,
+        "startColumn": 7,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable snapshot.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 12048,
+        "startColumn": 38,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable findComponentByElId.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14074,
+        "startColumn": 13,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s1.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14331,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable signature.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14332,
+        "startColumn": 9,
+        "endColumn": 18
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s2.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14334,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s3.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14336,
+        "startColumn": 9,
+        "endColumn": 11
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable directive2.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 14454,
+        "startColumn": 24,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable hasEphemeralTriggers.",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 15171,
+        "startColumn": 7,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable meta.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 548,
+        "startColumn": 9,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable isBooleanAttr2.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 2685,
+        "startColumn": 7,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable EMPTY_ARR.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 2687,
+        "startColumn": 7,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable camelize.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 2709,
+        "startColumn": 7,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable hyphenate.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 2713,
+        "startColumn": 7,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable toHandlerKey.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 2715,
+        "startColumn": 7,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable isScoped.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 6117,
+        "startColumn": 9,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable snapshot.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 6495,
+        "startColumn": 40,
+        "endColumn": 48
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable placement.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 12217,
+        "startColumn": 15,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable offsetValue.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 12217,
+        "startColumn": 26,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable findComponentByElId.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14391,
+        "startColumn": 15,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s1.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14646,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable signature.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14647,
+        "startColumn": 11,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s2.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14649,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable s3.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14651,
+        "startColumn": 11,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable directive3.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 14769,
+        "startColumn": 26,
+        "endColumn": 36
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable hasEphemeralTriggers.",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 15479,
+        "startColumn": 9,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable select.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 185,
+        "startColumn": 13,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused function formatDataSelection.",
+      "file": "resources/assets/js/snipeit.js",
+      "region": {
+        "startLine": 401,
+        "startColumn": 14,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable select.",
+      "file": "resources/assets/js/snipeit_modals.js",
+      "region": {
+        "startLine": 56,
+        "startColumn": 17,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable fs.",
+      "file": "webpack.mix.js",
+      "region": {
+        "startLine": 2,
+        "startColumn": 7,
+        "endColumn": 9
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of e2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7159,
+        "startColumn": 193,
+        "endColumn": 215
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of p2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 232,
+        "endColumn": 249
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of D2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7360,
+        "startColumn": 251,
+        "endColumn": 609
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of e2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6389,
+        "startColumn": 193,
+        "endColumn": 215
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of p2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 232,
+        "endColumn": 249
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/variable-initialization-conflict",
+      "rule_index": 164,
+      "level": "warning",
+      "message": "This initialization of D2 overwrites an [earlier initialization](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6590,
+        "startColumn": 251,
+        "endColumn": 609
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o4' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 5414,
+        "startColumn": 60,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'i2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6744,
+        "startColumn": 44,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 6980,
+        "startColumn": 23,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'i2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7041,
+        "startColumn": 25,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'r2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7041,
+        "startColumn": 42,
+        "endColumn": 44
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'a2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7047,
+        "startColumn": 19,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'S2' is used before its [declaration](1).\nVariable 'S2' is used before its [declaration](2).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7195,
+        "startColumn": 28,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'x2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7195,
+        "startColumn": 46,
+        "endColumn": 48
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'D2' is used before its [declaration](1).\nVariable 'D2' is used before its [declaration](2).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7195,
+        "startColumn": 56,
+        "endColumn": 58
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'C2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7196,
+        "startColumn": 48,
+        "endColumn": 50
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable '_2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7196,
+        "startColumn": 58,
+        "endColumn": 60
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'E2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7200,
+        "startColumn": 25,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o4' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 8804,
+        "startColumn": 54,
+        "endColumn": 56
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o4' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 4644,
+        "startColumn": 60,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'i2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 5974,
+        "startColumn": 44,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6210,
+        "startColumn": 23,
+        "endColumn": 25
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'i2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6271,
+        "startColumn": 25,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'r2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6271,
+        "startColumn": 42,
+        "endColumn": 44
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'a2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6277,
+        "startColumn": 19,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'S2' is used before its [declaration](1).\nVariable 'S2' is used before its [declaration](2).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6425,
+        "startColumn": 28,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'x2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6425,
+        "startColumn": 46,
+        "endColumn": 48
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'D2' is used before its [declaration](1).\nVariable 'D2' is used before its [declaration](2).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6425,
+        "startColumn": 56,
+        "endColumn": 58
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'C2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6426,
+        "startColumn": 48,
+        "endColumn": 50
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable '_2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6426,
+        "startColumn": 58,
+        "endColumn": 60
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'E2' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6430,
+        "startColumn": 25,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'o4' is used before its [declaration](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 7391,
+        "startColumn": 54,
+        "endColumn": 56
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (96% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "resources/assets/js/dragtable.js",
+      "region": {
+        "startLine": 233,
+        "startColumn": 13,
+        "endColumn": 28
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 1910,
+        "startColumn": 16,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 2031,
+        "startColumn": 30,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 7606,
+        "startColumn": 30,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.csp.esm.js",
+      "region": {
+        "startLine": 13450,
+        "startColumn": 16,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 1911,
+        "startColumn": 18,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk2](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 2032,
+        "startColumn": 33,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 12226,
+        "startColumn": 28,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.csp.js",
+      "region": {
+        "startLine": 13886,
+        "startColumn": 18,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 1994,
+        "startColumn": 16,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 2115,
+        "startColumn": 30,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 6836,
+        "startColumn": 30,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.esm.js",
+      "region": {
+        "startLine": 12680,
+        "startColumn": 16,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 1602,
+        "startColumn": 14,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 1723,
+        "startColumn": 28,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function walk2](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 10813,
+        "startColumn": 29,
+        "endColumn": 34
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [anonymous function](1).",
+      "file": "public/vendor/livewire/livewire.js",
+      "region": {
+        "startLine": 12473,
+        "startColumn": 18,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    }
+  ],
+  "sarif_metadata": {
+    "version": "2.1.0",
+    "schema_uri": "https://json.schemastore.org/sarif-2.1.0.json",
+    "tool": {
+      "name": "CodeQL",
+      "version": "unknown",
+      "information_uri": ""
+    },
+    "tool_name": "CodeQL",
+    "tool_version": "unknown"
+  }
+}

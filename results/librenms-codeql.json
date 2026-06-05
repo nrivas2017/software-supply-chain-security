@@ -1,0 +1,1446 @@
+{
+  "total_issues": 102,
+  "issues_by_severity": {
+    "error": 0,
+    "warning": 102,
+    "note": 0
+  },
+  "issues": [
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "rule_index": 16,
+      "level": "warning",
+      "message": "This does not escape backslash characters in the input.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 212,
+        "startColumn": 34,
+        "endColumn": 56
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "file": "doc/js/docs-settings-links.js",
+      "region": {
+        "startLine": 79,
+        "startColumn": 25,
+        "endColumn": 76
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "rule_index": 71,
+      "level": "warning",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "file": "doc/js/docs-settings-links.js",
+      "region": {
+        "startLine": 79,
+        "startColumn": 25,
+        "endColumn": 76
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/regex/duplicate-in-character-class",
+      "rule_index": 131,
+      "level": "warning",
+      "message": "Character '\\,' is [repeated in the same character class](1).",
+      "file": "html/js/leaflet-image.js",
+      "region": {
+        "startLine": 261,
+        "startColumn": 103,
+        "endColumn": 105
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'useArrayBuffer' always evaluates to false.",
+      "file": "html/js/hogan-2.0.0.js",
+      "region": {
+        "startLine": 26,
+        "startColumn": 17,
+        "endColumn": 31
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'useArrayBuffer' always evaluates to false.",
+      "file": "html/js/hogan-2.0.0.js",
+      "region": {
+        "startLine": 170,
+        "startColumn": 9,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'useArrayBuffer' always evaluates to false.",
+      "file": "html/js/hogan-2.0.0.js",
+      "region": {
+        "startLine": 172,
+        "startColumn": 10,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable refresh is used like a local variable, but is missing a declaration.",
+      "file": "html/js/librenms.js",
+      "region": {
+        "startLine": 143,
+        "startColumn": 13,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable txt is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 75,
+        "startColumn": 74,
+        "endColumn": 77
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable iwidth is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 91,
+        "startColumn": 36,
+        "endColumn": 42
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable winoffset is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 92,
+        "endColumn": 10
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable scrolloffset is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 95,
+        "endColumn": 13
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable range is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 182,
+        "startColumn": 105,
+        "endColumn": 110
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-variable-declaration",
+      "rule_index": 153,
+      "level": "warning",
+      "message": "Variable domfrag is used like a local variable, but is missing a declaration.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 182,
+        "startColumn": 169,
+        "endColumn": 176
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of k is unused, since it is always overwritten.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 206,
+        "startColumn": 49,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of ary is unused, since it is always overwritten.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 220,
+        "startColumn": 50,
+        "endColumn": 65
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to hookPt here is unused.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 301,
+        "startColumn": 10,
+        "endColumn": 44
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to hookPt here is unused.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 302,
+        "startColumn": 162,
+        "endColumn": 189
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to l here is unused.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 309,
+        "startColumn": 29,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to l here is unused.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 313,
+        "startColumn": 28,
+        "endColumn": 57
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable offset.",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 177,
+        "startColumn": 17,
+        "endColumn": 23
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable pos.",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 178,
+        "startColumn": 17,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable lastSrc.",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 215,
+        "startColumn": 17,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable start.",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 216,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable qxDocument.",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 339,
+        "startColumn": 17,
+        "endColumn": 27
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable module.",
+      "file": "html/js/leaflet-image.js",
+      "region": {
+        "startLine": 1,
+        "startColumn": 351,
+        "endColumn": 357
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable exports.",
+      "file": "html/js/leaflet-image.js",
+      "region": {
+        "startLine": 1,
+        "startColumn": 358,
+        "endColumn": 365
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable app.",
+      "file": "resources/js/app.js",
+      "region": {
+        "startLine": 82,
+        "startColumn": 7,
+        "endColumn": 10
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fgcolor' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 11,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_bgcolor' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 70,
+        "endColumn": 80
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_textcolor' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 129,
+        "endColumn": 141
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_capcolor' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 192,
+        "endColumn": 203
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closecolor' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 253,
+        "endColumn": 266
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_textfont' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 318,
+        "endColumn": 329
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_captionfont' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 395,
+        "endColumn": 409
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closefont' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 478,
+        "endColumn": 490
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_textsize' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 557,
+        "endColumn": 568
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_captionsize' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 612,
+        "endColumn": 626
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closesize' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 673,
+        "endColumn": 685
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_width' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 730,
+        "endColumn": 738
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_border' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 781,
+        "endColumn": 790
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_cellpad' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 832,
+        "endColumn": 842
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_offsetx' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 883,
+        "endColumn": 893
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_offsety' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 935,
+        "endColumn": 945
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_text' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 987,
+        "endColumn": 994
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_cap' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1045,
+        "endColumn": 1051
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_sticky' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1089,
+        "endColumn": 1098
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_background' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1138,
+        "endColumn": 1151
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_close' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1196,
+        "endColumn": 1204
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_hpos' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1249,
+        "endColumn": 1256
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_status' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1298,
+        "endColumn": 1307
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_autostatus' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1348,
+        "endColumn": 1361
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_height' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1405,
+        "endColumn": 1414
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_snapx' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1455,
+        "endColumn": 1463
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_snapy' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1502,
+        "endColumn": 1510
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fixx' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1549,
+        "endColumn": 1556
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fixy' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1595,
+        "endColumn": 1602
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_relx' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1641,
+        "endColumn": 1648
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_rely' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1689,
+        "endColumn": 1696
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fgbackground' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1737,
+        "endColumn": 1752
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_bgbackground' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1799,
+        "endColumn": 1814
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_padxl' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1861,
+        "endColumn": 1869
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_padxr' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1908,
+        "endColumn": 1916
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_padyt' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 1955,
+        "endColumn": 1963
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_padyb' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2002,
+        "endColumn": 2010
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fullhtml' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2049,
+        "endColumn": 2060
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_vpos' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2102,
+        "endColumn": 2109
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_aboveheight' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2151,
+        "endColumn": 2165
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_capicon' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2210,
+        "endColumn": 2220
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_frame' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2262,
+        "endColumn": 2270
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_timeout' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2312,
+        "endColumn": 2322
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_function' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2363,
+        "endColumn": 2374
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_delay' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2419,
+        "endColumn": 2427
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_hauto' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2466,
+        "endColumn": 2474
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_vauto' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2513,
+        "endColumn": 2521
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closeclick' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2560,
+        "endColumn": 2573
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_wrap' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2617,
+        "endColumn": 2624
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_followmouse' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2662,
+        "endColumn": 2676
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_mouseoff' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2721,
+        "endColumn": 2732
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closetitle' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2774,
+        "endColumn": 2787
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_compatmode' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2837,
+        "endColumn": 2850
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_css' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2894,
+        "endColumn": 2900
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_fgclass' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2942,
+        "endColumn": 2952
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_bgclass' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 2994,
+        "endColumn": 3004
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_textfontclass' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 3046,
+        "endColumn": 3062
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_captionfontclass' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 3110,
+        "endColumn": 3129
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_closefontclass' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 3180,
+        "endColumn": 3197
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_texts' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 22,
+        "startColumn": 11,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/use-before-declaration",
+      "rule_index": 165,
+      "level": "warning",
+      "message": "Variable 'ol_caps' is used before its [declaration](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 22,
+        "startColumn": 85,
+        "endColumn": 92
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (94% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 77,
+        "startColumn": 21,
+        "endColumn": 49
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (92% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "html/js/RrdGraphJS/rrdGraphPng.js",
+      "region": {
+        "startLine": 358,
+        "startColumn": 25,
+        "endColumn": 73
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (94% of all statements in [the enclosing script](1) have an explicit semicolon).",
+      "file": "html/js/librenms.js",
+      "region": {
+        "startLine": 211,
+        "endColumn": 3
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (92% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "html/js/librenms.js",
+      "region": {
+        "startLine": 370,
+        "startColumn": 5,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (92% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "html/js/librenms.js",
+      "region": {
+        "startLine": 496,
+        "startColumn": 9,
+        "endColumn": 41
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (90% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "html/js/librenms.js",
+      "region": {
+        "startLine": 601,
+        "startColumn": 9,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (98% of all statements in [the enclosing script](1) have an explicit semicolon).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 27,
+        "startColumn": 62,
+        "endColumn": 157
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (91% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "resources/js/components/LibrenmsSettings.vue",
+      "region": {
+        "startLine": 157,
+        "startColumn": 25,
+        "endColumn": 33
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function cClick](1).",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 203,
+        "startColumn": 79,
+        "endColumn": 80
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/eval-like-call",
+      "rule_index": 193,
+      "level": "warning",
+      "message": "Avoid using functions that evaluate strings as code.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 40,
+        "startColumn": 68,
+        "endColumn": 117
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/eval-like-call",
+      "rule_index": 193,
+      "level": "warning",
+      "message": "Avoid using functions that evaluate strings as code.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 65,
+        "startColumn": 70,
+        "endColumn": 103
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/eval-like-call",
+      "rule_index": 193,
+      "level": "warning",
+      "message": "Avoid using functions that evaluate strings as code.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 81,
+        "startColumn": 81,
+        "endColumn": 132
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/eval-like-call",
+      "rule_index": 193,
+      "level": "warning",
+      "message": "Avoid using functions that evaluate strings as code.",
+      "file": "html/js/overlib_mini.js",
+      "region": {
+        "startLine": 229,
+        "startColumn": 12,
+        "endColumn": 52
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    }
+  ],
+  "sarif_metadata": {
+    "version": "2.1.0",
+    "schema_uri": "https://json.schemastore.org/sarif-2.1.0.json",
+    "tool": {
+      "name": "CodeQL",
+      "version": "unknown",
+      "information_uri": ""
+    },
+    "tool_name": "CodeQL",
+    "tool_version": "unknown"
+  }
+}

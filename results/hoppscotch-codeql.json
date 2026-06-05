@@ -1,0 +1,567 @@
+{
+  "total_issues": 39,
+  "issues_by_severity": {
+    "error": 0,
+    "warning": 39,
+    "note": 0
+  },
+  "issues": [
+    {
+      "rule_id": "js/polynomial-redos",
+      "rule_index": 0,
+      "level": "warning",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with '<<' and with many repetitions of '<<='.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with '<<' and with many repetitions of '<<='.",
+      "file": "packages/hoppscotch-data/src/environment/index.ts",
+      "region": {
+        "startLine": 62,
+        "startColumn": 10,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "rule_index": 0,
+      "level": "warning",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with '<<' and with many repetitions of '<<='.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with '<<' and with many repetitions of '<<='.",
+      "file": "packages/hoppscotch-data/src/environment/index.ts",
+      "region": {
+        "startLine": 63,
+        "startColumn": 14,
+        "endLine": 81,
+        "endColumn": 7
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "rule_index": 0,
+      "level": "warning",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with '<<' and with many repetitions of '<<='.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with '<<' and with many repetitions of '<<='.",
+      "file": "packages/hoppscotch-data/src/environment/index.ts",
+      "region": {
+        "startLine": 119,
+        "startColumn": 5,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "rule_index": 0,
+      "level": "warning",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with '<<' and with many repetitions of '<<='.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with '<<' and with many repetitions of '<<='.",
+      "file": "packages/hoppscotch-data/src/environment/index.ts",
+      "region": {
+        "startLine": 123,
+        "startColumn": 27,
+        "endLine": 165,
+        "endColumn": 6
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/redos",
+      "rule_index": 1,
+      "level": "warning",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with '-.' and containing many repetitions of '-.'.",
+      "file": "packages/hoppscotch-common/src/services/context-menu/menu/__tests__/url.menu.spec.ts",
+      "region": {
+        "startLine": 37,
+        "startColumn": 55,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/redos",
+      "rule_index": 1,
+      "level": "warning",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with '-.' and containing many repetitions of '-.'.",
+      "file": "packages/hoppscotch-common/src/services/context-menu/menu/url.menu.ts",
+      "region": {
+        "startLine": 26,
+        "startColumn": 40,
+        "endColumn": 47
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/code-injection",
+      "rule_index": 52,
+      "level": "warning",
+      "message": "This code execution depends on a [user-provided value](1).",
+      "file": "packages/hoppscotch-js-sandbox/src/web/pre-request/worker.ts",
+      "region": {
+        "startLine": 14,
+        "startColumn": 46,
+        "endColumn": 62
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/code-injection",
+      "rule_index": 52,
+      "level": "warning",
+      "message": "This code execution depends on a [user-provided value](1).",
+      "file": "packages/hoppscotch-js-sandbox/src/web/test-runner/worker.ts",
+      "region": {
+        "startLine": 24,
+        "startColumn": 46,
+        "endColumn": 56
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/overly-large-range",
+      "rule_index": 73,
+      "level": "warning",
+      "message": "Suspicious character range that overlaps with a-f in the same character class, and is equivalent to \\[A-Z\\\\[\\\\\\\\]^_`a-f\\].",
+      "file": "packages/hoppscotch-common/src/helpers/syntax/gqlQueryLangMode.js",
+      "region": {
+        "startLine": 21,
+        "startColumn": 39,
+        "endColumn": 42
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/log-injection",
+      "rule_index": 84,
+      "level": "warning",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "file": "packages/hoppscotch-common/src/helpers/graphql/connection.ts",
+      "region": {
+        "startLine": 613,
+        "startColumn": 23,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/log-injection",
+      "rule_index": 84,
+      "level": "warning",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "file": "packages/hoppscotch-common/src/helpers/graphql/connection.ts",
+      "region": {
+        "startLine": 630,
+        "startColumn": 34,
+        "endColumn": 41
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "packages/hoppscotch-common/src/helpers/import-export/import/workers/openapi-import-worker.ts",
+      "region": {
+        "startLine": 34,
+        "startColumn": 41,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "packages/hoppscotch-common/src/helpers/workers/documentation.worker.ts",
+      "region": {
+        "startLine": 232,
+        "startColumn": 10,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "packages/hoppscotch-common/src/helpers/workers/sandbox.worker.ts",
+      "region": {
+        "startLine": 65,
+        "startColumn": 10,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "packages/hoppscotch-js-sandbox/src/web/pre-request/worker.ts",
+      "region": {
+        "startLine": 33,
+        "startColumn": 41,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "packages/hoppscotch-js-sandbox/src/web/test-runner/worker.ts",
+      "region": {
+        "startLine": 44,
+        "startColumn": 41,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/post-request.js",
+      "region": {
+        "startLine": 2,
+        "startColumn": 2,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-expression",
+      "rule_index": 110,
+      "level": "warning",
+      "message": "This expression has no effect.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/pre-request.js",
+      "region": {
+        "startLine": 2,
+        "startColumn": 2,
+        "endColumn": 15
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'auth' always evaluates to true.",
+      "file": "packages/hoppscotch-common/src/components/graphql/Headers.vue",
+      "region": {
+        "startLine": 536,
+        "startColumn": 34,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'auth' always evaluates to true.",
+      "file": "packages/hoppscotch-common/src/helpers/utils/EffectiveURL.ts",
+      "region": {
+        "startLine": 66,
+        "startColumn": 34,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'text' always evaluates to false.",
+      "file": "packages/hoppscotch-common/src/helpers/utils/tooltip.ts",
+      "region": {
+        "startLine": 47,
+        "startColumn": 12,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of resolvedCollection is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-common/src/components/http/test/Runner.vue",
+      "region": {
+        "startLine": 251,
+        "startColumn": 7,
+        "endColumn": 60
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of path is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-backend/src/mock-server/mock-server.service.ts",
+      "region": {
+        "startLine": 1020,
+        "startColumn": 11,
+        "endColumn": 21
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of invokeActionType is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-common/src/helpers/editor/extensions/HoppEnvironment.ts",
+      "region": {
+        "startLine": 225,
+        "startColumn": 15,
+        "endLine": 228,
+        "endColumn": 80
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of constructorName is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/post-request.js",
+      "region": {
+        "startLine": 223,
+        "startColumn": 13,
+        "endColumn": 40
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of constructorName is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/post-request.js",
+      "region": {
+        "startLine": 275,
+        "startColumn": 13,
+        "endColumn": 40
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of constructorName is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/post-request.js",
+      "region": {
+        "startLine": 1309,
+        "startColumn": 13,
+        "endColumn": 40
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The initial value of constructorName is unused, since it is always overwritten.",
+      "file": "packages/hoppscotch-js-sandbox/src/bootstrap-code/post-request.js",
+      "region": {
+        "startLine": 1352,
+        "startColumn": 13,
+        "endColumn": 40
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable regex.",
+      "file": "packages/hoppscotch-common/src/helpers/ternlint.js",
+      "region": {
+        "startLine": 280,
+        "startColumn": 23,
+        "endColumn": 28
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable scopeVisitor.",
+      "file": "packages/hoppscotch-common/src/helpers/ternlint.js",
+      "region": {
+        "startLine": 612,
+        "startColumn": 5,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused imports GetInviteDetailsQuery, GetInviteDetailsQueryVariables.",
+      "file": "packages/hoppscotch-common/src/platform/backend.ts",
+      "region": {
+        "startLine": 6,
+        "endLine": 26,
+        "endColumn": 35
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable tab2.",
+      "file": "packages/hoppscotch-common/src/services/tab/__tests__/tab.service.spec.ts",
+      "region": {
+        "startLine": 191,
+        "startColumn": 13,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable tab2.",
+      "file": "packages/hoppscotch-common/src/services/tab/__tests__/tab.service.spec.ts",
+      "region": {
+        "startLine": 207,
+        "startColumn": 13,
+        "endColumn": 17
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import field.",
+      "file": "packages/hoppscotch-data/src/cookies.ts",
+      "region": {
+        "startLine": 1,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable decoder.",
+      "file": "packages/hoppscotch-data/src/utils/akamai-eg.ts",
+      "region": {
+        "startLine": 15,
+        "startColumn": 9,
+        "endColumn": 16
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable signingKey.",
+      "file": "packages/hoppscotch-data/src/utils/akamai-eg.ts",
+      "region": {
+        "startLine": 30,
+        "startColumn": 9,
+        "endColumn": 19
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import tuple.",
+      "file": "packages/hoppscotch-data/vite.config.ts",
+      "region": {
+        "startLine": 1,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/assignment-to-constant",
+      "rule_index": 169,
+      "level": "warning",
+      "message": "Assignment to variable dbMockServer, which is [declared](1) constant.",
+      "file": "packages/hoppscotch-backend/src/mock-server/mock-server.service.spec.ts",
+      "region": {
+        "startLine": 16,
+        "startColumn": 3,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/syntax-error",
+      "rule_index": 187,
+      "level": "warning",
+      "message": "Error: Declaration or statement expected.",
+      "file": "packages/hoppscotch-common/src/types/post-request.d.ts",
+      "region": {
+        "startLine": 1294,
+        "endColumn": 2
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    }
+  ],
+  "sarif_metadata": {
+    "version": "2.1.0",
+    "schema_uri": "https://json.schemastore.org/sarif-2.1.0.json",
+    "tool": {
+      "name": "CodeQL",
+      "version": "unknown",
+      "information_uri": ""
+    },
+    "tool_name": "CodeQL",
+    "tool_version": "unknown"
+  }
+}

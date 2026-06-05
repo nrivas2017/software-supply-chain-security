@@ -1,0 +1,1005 @@
+{
+  "total_issues": 71,
+  "issues_by_severity": {
+    "error": 0,
+    "warning": 71,
+    "note": 0
+  },
+  "issues": [
+    {
+      "rule_id": "js/incomplete-multi-character-sanitization",
+      "rule_index": 17,
+      "level": "warning",
+      "message": "This string may still contain [<script](1), which may cause an HTML element injection vulnerability.",
+      "file": "app/javascript/mastodon/service_worker/web_push_notifications.js",
+      "region": {
+        "startLine": 79,
+        "startColumn": 12,
+        "endColumn": 98
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/incomplete-multi-character-sanitization",
+      "rule_index": 17,
+      "level": "warning",
+      "message": "This string may still contain [<script](1), which may cause an HTML element injection vulnerability.",
+      "file": "app/javascript/mastodon/utils/html.ts",
+      "region": {
+        "startLine": 8,
+        "startColumn": 23,
+        "endLine": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/actions/importer/normalizer.js",
+      "region": {
+        "startLine": 94,
+        "startColumn": 59,
+        "endColumn": 72
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/components/error_boundary.jsx",
+      "region": {
+        "startLine": 101,
+        "startColumn": 80,
+        "endColumn": 90
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/compose/index.tsx",
+      "region": {
+        "startLine": 174,
+        "startColumn": 50,
+        "endColumn": 75
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/custom_homepage/components/header.tsx",
+      "region": {
+        "startLine": 17,
+        "startColumn": 15,
+        "endColumn": 46
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/home_timeline/components/announcements/index.tsx",
+      "region": {
+        "startLine": 53,
+        "startColumn": 14,
+        "endColumn": 39
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/interaction_modal/index.tsx",
+      "region": {
+        "startLine": 447,
+        "startColumn": 16,
+        "endColumn": 28
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/navigation_panel/components/sign_in_banner.tsx",
+      "region": {
+        "startLine": 44,
+        "startColumn": 17,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/ui/components/link_footer.tsx",
+      "region": {
+        "startLine": 37,
+        "startColumn": 24,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/ui/components/link_footer.tsx",
+      "region": {
+        "startLine": 110,
+        "startColumn": 22,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 106,
+        "startColumn": 17,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "rule_index": 43,
+      "level": "warning",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "file": "app/javascript/mastodon/utils/html.ts",
+      "region": {
+        "startLine": 8,
+        "startColumn": 23,
+        "endLine": 11,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "rule_index": 66,
+      "level": "warning",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "file": "app/javascript/mastodon/reducers/settings.js",
+      "region": {
+        "startLine": 129,
+        "startColumn": 26,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "rule_index": 66,
+      "level": "warning",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "file": "app/javascript/mastodon/reducers/settings.js",
+      "region": {
+        "startLine": 130,
+        "startColumn": 23,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "rule_index": 66,
+      "level": "warning",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "file": "app/javascript/mastodon/reducers/settings.js",
+      "region": {
+        "startLine": 131,
+        "startColumn": 32,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "rule_index": 66,
+      "level": "warning",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "file": "app/javascript/mastodon/reducers/settings.js",
+      "region": {
+        "startLine": 179,
+        "startColumn": 74,
+        "endColumn": 80
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/log-injection",
+      "rule_index": 84,
+      "level": "warning",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "file": "streaming/index.js",
+      "region": {
+        "startLine": 463,
+        "startColumn": 18,
+        "endColumn": 60
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "app/javascript/entrypoints/embed.tsx",
+      "region": {
+        "startLine": 53,
+        "startColumn": 37,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "rule_index": 98,
+      "level": "warning",
+      "message": "Postmessage handler has no origin check.",
+      "file": "app/javascript/mastodon/features/emoji/worker.ts",
+      "region": {
+        "startLine": 11,
+        "startColumn": 24,
+        "endColumn": 29
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/trivial-conditional",
+      "rule_index": 150,
+      "level": "warning",
+      "message": "This use of variable 'hideHeadingOnMobile' always evaluates to true.",
+      "file": "app/javascript/mastodon/features/ui/components/column.jsx",
+      "region": {
+        "startLine": 56,
+        "startColumn": 62,
+        "endColumn": 81
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/useless-assignment-to-local",
+      "rule_index": 156,
+      "level": "warning",
+      "message": "The value assigned to accountCollectionIds here is unused.",
+      "file": "app/javascript/mastodon/reducers/slices/collections.ts",
+      "region": {
+        "startLine": 252,
+        "startColumn": 11,
+        "endLine": 254,
+        "endColumn": 12
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import getLinks.",
+      "file": "app/javascript/mastodon/actions/domain_blocks.js",
+      "region": {
+        "startLine": 1,
+        "endColumn": 40
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import LoadingIndicator.",
+      "file": "app/javascript/mastodon/components/scrollable_list/index.jsx",
+      "region": {
+        "startLine": 20,
+        "endColumn": 57
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable locale.",
+      "file": "app/javascript/mastodon/features/about/index.jsx",
+      "region": {
+        "startLine": 79,
+        "startColumn": 75,
+        "endColumn": 81
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import classNames.",
+      "file": "app/javascript/mastodon/features/compose/components/compose_form.jsx",
+      "region": {
+        "startLine": 6,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import Link.",
+      "file": "app/javascript/mastodon/features/direct_timeline/components/conversation.jsx",
+      "region": {
+        "startLine": 7,
+        "endColumn": 53
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import DismissableBanner.",
+      "file": "app/javascript/mastodon/features/explore/links.jsx",
+      "region": {
+        "startLine": 12,
+        "endColumn": 76
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import DismissableBanner.",
+      "file": "app/javascript/mastodon/features/explore/statuses.jsx",
+      "region": {
+        "startLine": 15,
+        "endColumn": 76
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import DismissableBanner.",
+      "file": "app/javascript/mastodon/features/explore/tags.jsx",
+      "region": {
+        "startLine": 12,
+        "endColumn": 76
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import Link.",
+      "file": "app/javascript/mastodon/features/notifications/components/notification.jsx",
+      "region": {
+        "startLine": 6,
+        "endColumn": 53
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable remoteHint.",
+      "file": "app/javascript/mastodon/features/status/index.jsx",
+      "region": {
+        "startLine": 531,
+        "startColumn": 33,
+        "endColumn": 43
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused variable refresh.",
+      "file": "app/javascript/mastodon/features/status/index.jsx",
+      "region": {
+        "startLine": 532,
+        "startColumn": 62,
+        "endColumn": 69
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/unused-local-variable",
+      "rule_index": 162,
+      "level": "warning",
+      "message": "Unused import resolve.",
+      "file": "vitest.config.mts",
+      "region": {
+        "startLine": 1,
+        "endColumn": 37
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (97% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "app/javascript/mastodon/components/status.jsx",
+      "region": {
+        "startLine": 435,
+        "endColumn": 8
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (96% of all statements in [the enclosing function](1) have an explicit semicolon).",
+      "file": "app/javascript/mastodon/reducers/statuses.js",
+      "region": {
+        "startLine": 100,
+        "endColumn": 72
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (90% of all statements in [the enclosing script](1) have an explicit semicolon).",
+      "file": "app/javascript/mastodon/reducers/timelines.js",
+      "region": {
+        "startLine": 159,
+        "endColumn": 2
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/automatic-semicolon-insertion",
+      "rule_index": 175,
+      "level": "warning",
+      "message": "Avoid automated semicolon insertion (91% of all statements in [the enclosing script](1) have an explicit semicolon).",
+      "file": "streaming/index.js",
+      "region": {
+        "startLine": 107,
+        "endColumn": 2
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function addReactionRequest](1).",
+      "file": "app/javascript/mastodon/actions/announcements.js",
+      "region": {
+        "startLine": 103,
+        "startColumn": 55,
+        "endColumn": 67
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function addReactionSuccess](1).",
+      "file": "app/javascript/mastodon/actions/announcements.js",
+      "region": {
+        "startLine": 107,
+        "startColumn": 55,
+        "endColumn": 67
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function uploadThumbnailFail](1).",
+      "file": "app/javascript/mastodon/actions/compose.js",
+      "region": {
+        "startLine": 409,
+        "startColumn": 38,
+        "endColumn": 43
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/superfluous-trailing-arguments",
+      "rule_index": 191,
+      "level": "warning",
+      "message": "Superfluous argument passed to [function changeUploadComposeFail](1).",
+      "file": "app/javascript/mastodon/actions/compose.js",
+      "region": {
+        "startLine": 488,
+        "startColumn": 46,
+        "endColumn": 51
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/components/picture_in_picture_placeholder.tsx",
+      "region": {
+        "startLine": 39,
+        "startColumn": 13,
+        "endColumn": 18
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/alt_text_modal/components/info_button.tsx",
+      "region": {
+        "startLine": 40,
+        "startColumn": 15,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/audio/index.tsx",
+      "region": {
+        "startLine": 627,
+        "startColumn": 19,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/audio/index.tsx",
+      "region": {
+        "startLine": 658,
+        "startColumn": 19,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/compose/components/language_dropdown.tsx",
+      "region": {
+        "startLine": 288,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/home_timeline/components/inline_follow_suggestions.tsx",
+      "region": {
+        "startLine": 265,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/home_timeline/components/inline_follow_suggestions.tsx",
+      "region": {
+        "startLine": 278,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/navigation_panel/components/more_link.tsx",
+      "region": {
+        "startLine": 117,
+        "startColumn": 15,
+        "endColumn": 20
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/onboarding/profile.tsx",
+      "region": {
+        "startLine": 190,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/onboarding/profile.tsx",
+      "region": {
+        "startLine": 213,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 76,
+        "startColumn": 19,
+        "endColumn": 24
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 96,
+        "startColumn": 25,
+        "endColumn": 30
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 122,
+        "startColumn": 23,
+        "endColumn": 28
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 137,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 149,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 161,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/domain_block_modal.tsx",
+      "region": {
+        "startLine": 173,
+        "startColumn": 21,
+        "endColumn": 26
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 182,
+        "startColumn": 27,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 183,
+        "startColumn": 33,
+        "endColumn": 38
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 188,
+        "startColumn": 27,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 193,
+        "startColumn": 27,
+        "endColumn": 32
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/ui/components/navigation_bar.tsx",
+      "region": {
+        "startLine": 205,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/malformed-html-id",
+      "rule_index": 194,
+      "level": "warning",
+      "message": "The value of the id attribute must contain at least one character.",
+      "file": "app/javascript/mastodon/features/video/components/hotkey_indicator.tsx",
+      "region": {
+        "startLine": 35,
+        "startColumn": 17,
+        "endColumn": 22
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/unused-or-undefined-state-property",
+      "rule_index": 197,
+      "level": "warning",
+      "message": "Component state property 'componentStack' is [written](1), but it is never read.\nComponent state property 'componentStack' is [written](2), but it is never read.",
+      "file": "app/javascript/mastodon/components/error_boundary.jsx",
+      "region": {
+        "startLine": 12,
+        "startColumn": 16,
+        "endColumn": 59
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/unused-or-undefined-state-property",
+      "rule_index": 197,
+      "level": "warning",
+      "message": "Component state property 'time' is [written](1), but it is never read.\nComponent state property 'time' is [written](2), but it is never read.",
+      "file": "app/javascript/mastodon/containers/media_container.jsx",
+      "region": {
+        "startLine": 20,
+        "startColumn": 16,
+        "endColumn": 60
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/inconsistent-state-update",
+      "rule_index": 199,
+      "level": "warning",
+      "message": "Component state update uses [potentially inconsistent value](1).",
+      "file": "app/javascript/mastodon/components/admin/ReportReasonSelector.jsx",
+      "region": {
+        "startLine": 143,
+        "startColumn": 7,
+        "endColumn": 87
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/inconsistent-state-update",
+      "rule_index": 199,
+      "level": "warning",
+      "message": "Component state update uses [potentially inconsistent value](1).",
+      "file": "app/javascript/mastodon/components/media_gallery.jsx",
+      "region": {
+        "startLine": 247,
+        "startColumn": 7,
+        "endColumn": 118
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/inconsistent-state-update",
+      "rule_index": 199,
+      "level": "warning",
+      "message": "Component state update uses [potentially inconsistent value](1).",
+      "file": "app/javascript/mastodon/components/media_gallery.jsx",
+      "region": {
+        "startLine": 249,
+        "startColumn": 7,
+        "endColumn": 53
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    },
+    {
+      "rule_id": "js/react/inconsistent-state-update",
+      "rule_index": 199,
+      "level": "warning",
+      "message": "Component state update uses [potentially inconsistent value](1).",
+      "file": "app/javascript/mastodon/components/media_gallery.jsx",
+      "region": {
+        "startLine": 265,
+        "startColumn": 7,
+        "endColumn": 54
+      },
+      "kind": "notApplicable",
+      "properties": {}
+    }
+  ],
+  "sarif_metadata": {
+    "version": "2.1.0",
+    "schema_uri": "https://json.schemastore.org/sarif-2.1.0.json",
+    "tool": {
+      "name": "CodeQL",
+      "version": "unknown",
+      "information_uri": ""
+    },
+    "tool_name": "CodeQL",
+    "tool_version": "unknown"
+  }
+}

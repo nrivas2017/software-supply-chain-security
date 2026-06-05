@@ -1,0 +1,20 @@
+2026-05-29 23:32:45 | INFO | Usando Syft CLI: /usr/local/bin/syft
+2026-05-29 23:32:45 | INFO | [1/9] Procesando repositorio data/repos/Ghost
+2026-05-29 23:41:44 | INFO | SBOM guardado en results/Ghost-sbom.json
+2026-05-29 23:41:44 | INFO | [2/9] Procesando repositorio data/repos/apache-superset
+2026-05-29 23:48:29 | INFO | SBOM guardado en results/apache-superset-sbom.json
+2026-05-29 23:48:29 | INFO | [3/9] Procesando repositorio data/repos/gitea
+2026-05-29 23:50:25 | INFO | SBOM guardado en results/gitea-sbom.json
+2026-05-29 23:50:25 | INFO | [4/9] Procesando repositorio data/repos/hoppscotch
+2026-05-29 23:50:51 | INFO | SBOM guardado en results/hoppscotch-sbom.json
+2026-05-29 23:50:51 | INFO | [5/9] Procesando repositorio data/repos/librenms
+2026-05-30 00:02:31 | INFO | SBOM guardado en results/librenms-sbom.json
+2026-05-30 00:02:31 | INFO | [6/9] Procesando repositorio data/repos/mastodon
+2026-05-30 00:07:52 | INFO | SBOM guardado en results/mastodon-sbom.json
+2026-05-30 00:07:52 | INFO | [7/9] Procesando repositorio data/repos/snipe-it
+2026-05-30 00:15:02 | INFO | SBOM guardado en results/snipe-it-sbom.json
+2026-05-30 00:15:02 | INFO | [8/9] Procesando repositorio data/repos/wiki
+2026-05-30 00:15:43 | INFO | SBOM guardado en results/wiki-sbom.json
+2026-05-30 00:15:43 | INFO | [9/9] Procesando repositorio data/repos/zoneminder
+2026-05-30 00:21:44 | INFO | SBOM guardado en results/zoneminder-sbom.json
+2026-05-30 00:21:44 | INFO | Resumen final | total_repos=9 | repos_generados=9 | archivos_generados=9 | omitidos=0 | errores=0
