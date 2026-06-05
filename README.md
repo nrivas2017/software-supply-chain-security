@@ -10,6 +10,8 @@ Dada la gran volumetría de datos generada (cientos de alertas de seguridad), el
 
 ## 2. Vulnerabilidades encontradas y 3. Clasificación según vector de ataque
 
+![Distribución de vulnerabilidades según su severidad](evidence/capturas/distribucion_severidad.png)
+
 A través del uso de herramientas SCA (Grype) y SAST (CodeQL), así como auditorías de configuración, se identificaron fallos críticos en múltiples capas del ciclo de vida del software en los repositorios analizados. Las vulnerabilidades abarcan desde problemas en librerías de pruebas y defectos de renderizado en el código fuente, hasta malas configuraciones de seguridad en los flujos de despliegue automatizado y carencias en la gobernanza y mantenimiento de los proyectos.
 
 ## 3. Clasificación según vector de ataque
