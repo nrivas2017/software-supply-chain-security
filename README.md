@@ -121,3 +121,13 @@ Toda la propuesta está fundamentada en los siguientes artefactos, ubicados en l
 ## 8. Conclusiones
 
 La seguridad en la cadena de suministro de software es un desafío tridimensional. El análisis demuestra que ejecutar herramientas de escaneo como Grype y CodeQL es insuficiente si no se blindan los pipelines de integración (CI/CD) y no se estandarizan las reglas de comportamiento del equipo de ingeniería. Al aplicar el ciclo Conozco, Verifico, Evidencio, Decido y Actúo, el equipo no solo reacciona ante un reporte de vulnerabilidades, sino que construye un mecanismo escalable y fundamentado para discernir entre falsos positivos, dependencias de desarrollo y verdaderos riesgos críticos, permitiendo alocar los recursos de mitigación donde el riesgo sistémico es real.
+
+## 9. Reconocimientos y Licencia
+
+Este proyecto utiliza y modifica scripts originales proporcionados para esta actividad académica, cuyos derechos de autor pertenecen a fastai (2022) bajo la Licencia Apache 2.0.
+
+**Modificaciones y aportes realizados en este repositorio:**
+* Creación del entorno de ejecución interactivo (`scripts/vulnerability_analysis.ipynb`).
+* Modificación de los scripts base (`add_submodales.py`, `generate_codeql.py`, `generate_grype.py`, `generate_sboms.py`) para integrar un sistema de salida y registro de logs (`*.log`).
+* Actualización del archivo `/data/repos.json` con la selección de los 9 repositorios Open Source analizados.
+* Generación de toda la documentación de auditoría, directorios de evidencia (`evidence/`) y resultados crudos (`results/`).

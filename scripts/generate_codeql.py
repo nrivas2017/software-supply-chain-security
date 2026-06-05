@@ -26,6 +26,12 @@ Salida:
     - Archivos JSON en data/results/ con patrón {repo-name}-codeql.json
     - Logs con progreso e información de errores
     - Resumen final con estadísticas de análisis
+
+# ------------------------------------------------------------------
+# MODIFICADO POR: nrivas2017
+# FECHA: Junio 2026
+# DETALLES: Se modificó este script para imprimir y registrar logs 
+# en archivos *.log para su ejecución interactiva desde un notebook.
 """
 
 from __future__ import annotations
