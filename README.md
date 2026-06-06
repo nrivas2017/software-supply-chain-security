@@ -8,7 +8,7 @@ El proceso de auditoría incluyó la generación de SBOMs (Software Bill of Mate
 
 Dada la gran volumetría de datos generada (cientos de alertas de seguridad), el objetivo de este documento es proponer un modelo de gestión integral. Para ilustrar esta propuesta, en las siguientes secciones se aplica el ciclo de análisis sobre una **muestra representativa con los hallazgos más críticos e ilustrativos** extraídos de todo el ecosistema evaluado, permitiendo así tomar decisiones de mitigación basadas en evidencia.
 
-## 2. Vulnerabilidades encontradas y 3. Clasificación según vector de ataque
+## 2. Vulnerabilidades encontradas
 
 ![Distribución de vulnerabilidades según su severidad](evidence/capturas/distribucion_severidad.png)
 
