@@ -1,8 +1,8 @@
 {
-  "total_issues": 56,
+  "total_issues": 73,
   "issues_by_severity": {
     "error": 0,
-    "warning": 56,
+    "warning": 73,
     "note": 0
   },
   "issues": [
@@ -17,7 +17,7 @@
         "startColumn": 14,
         "endColumn": 49
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -31,7 +31,7 @@
         "startColumn": 19,
         "endColumn": 72
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -45,7 +45,7 @@
         "startColumn": 19,
         "endColumn": 72
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -59,7 +59,7 @@
         "startColumn": 26,
         "endColumn": 37
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -73,7 +73,7 @@
         "startColumn": 27,
         "endColumn": 38
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -87,7 +87,7 @@
         "startColumn": 30,
         "endColumn": 36
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -101,7 +101,7 @@
         "startColumn": 30,
         "endColumn": 40
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -115,7 +115,7 @@
         "startColumn": 24,
         "endColumn": 25
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -129,7 +129,7 @@
         "startColumn": 22,
         "endColumn": 28
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -143,7 +143,7 @@
         "startColumn": 20,
         "endColumn": 43
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -157,7 +157,7 @@
         "startColumn": 23,
         "endColumn": 26
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -171,7 +171,7 @@
         "startColumn": 26,
         "endColumn": 29
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -185,7 +185,7 @@
         "startColumn": 31,
         "endColumn": 38
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -199,7 +199,7 @@
         "startColumn": 20,
         "endColumn": 24
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -213,7 +213,7 @@
         "startColumn": 19,
         "endColumn": 23
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -227,7 +227,7 @@
         "startColumn": 22,
         "endColumn": 26
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -241,7 +241,7 @@
         "startColumn": 25,
         "endColumn": 26
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -255,7 +255,7 @@
         "startColumn": 53,
         "endColumn": 61
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -269,7 +269,7 @@
         "startColumn": 71,
         "endColumn": 89
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -283,7 +283,7 @@
         "startColumn": 19,
         "endColumn": 28
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -297,7 +297,7 @@
         "startColumn": 33,
         "endColumn": 53
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -311,7 +311,7 @@
         "startColumn": 21,
         "endColumn": 26
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -325,7 +325,7 @@
         "startColumn": 54,
         "endColumn": 66
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -339,7 +339,7 @@
         "startColumn": 22,
         "endColumn": 26
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -353,7 +353,7 @@
         "startColumn": 28,
         "endColumn": 33
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -367,7 +367,7 @@
         "startColumn": 22,
         "endColumn": 24
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -381,7 +381,7 @@
         "startColumn": 38,
         "endColumn": 40
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -395,7 +395,7 @@
         "startColumn": 32,
         "endColumn": 45
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -409,7 +409,7 @@
         "startColumn": 33,
         "endColumn": 46
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -423,7 +423,7 @@
         "startColumn": 35,
         "endColumn": 43
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -437,7 +437,7 @@
         "startColumn": 37,
         "endColumn": 57
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -451,7 +451,7 @@
         "startColumn": 33,
         "endColumn": 46
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -465,7 +465,7 @@
         "startColumn": 37,
         "endColumn": 50
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -479,7 +479,7 @@
         "startColumn": 30,
         "endColumn": 43
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -493,7 +493,7 @@
         "startColumn": 28,
         "endColumn": 41
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -507,7 +507,7 @@
         "startColumn": 28,
         "endColumn": 29
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -521,7 +521,7 @@
         "startColumn": 36,
         "endColumn": 37
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -535,7 +535,7 @@
         "startColumn": 35,
         "endColumn": 46
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -549,7 +549,7 @@
         "startColumn": 35,
         "endColumn": 48
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -563,7 +563,7 @@
         "startColumn": 40,
         "endColumn": 53
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -577,7 +577,7 @@
         "startColumn": 40,
         "endColumn": 53
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -591,7 +591,7 @@
         "startColumn": 42,
         "endColumn": 55
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -605,7 +605,7 @@
         "startColumn": 27,
         "endColumn": 40
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -619,7 +619,7 @@
         "startColumn": 29,
         "endColumn": 49
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -633,7 +633,7 @@
         "startColumn": 29,
         "endColumn": 49
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -647,7 +647,7 @@
         "startColumn": 50,
         "endColumn": 105
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -661,7 +661,7 @@
         "startColumn": 35,
         "endColumn": 48
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -675,7 +675,7 @@
         "startColumn": 25,
         "endColumn": 31
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -689,7 +689,7 @@
         "startColumn": 4,
         "endColumn": 28
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -703,7 +703,7 @@
         "startColumn": 32,
         "endColumn": 40
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -717,7 +717,7 @@
         "startColumn": 15,
         "endColumn": 40
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -731,7 +731,7 @@
         "startColumn": 12,
         "endColumn": 22
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -745,7 +745,7 @@
         "startColumn": 27,
         "endColumn": 38
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -759,7 +759,7 @@
         "startColumn": 27,
         "endColumn": 38
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -773,7 +773,7 @@
         "startColumn": 28,
         "endColumn": 35
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -787,7 +787,245 @@
         "startColumn": 28,
         "endColumn": 35
       },
-      "kind": "notApplicable",
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/log-injection",
+      "rule_index": 33,
+      "level": "warning",
+      "message": "This log entry depends on a [user-provided value](1).\nThis log entry depends on a [user-provided value](2).",
+      "file": "modules/log/logger_global.go",
+      "region": {
+        "startLine": 22,
+        "startColumn": 55,
+        "endColumn": 61
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/log-injection",
+      "rule_index": 33,
+      "level": "warning",
+      "message": "This log entry depends on a [user-provided value](1).\nThis log entry depends on a [user-provided value](2).\nThis log entry depends on a [user-provided value](3).\nThis log entry depends on a [user-provided value](4).\nThis log entry depends on a [user-provided value](5).\nThis log entry depends on a [user-provided value](6).\nThis log entry depends on a [user-provided value](7).\nThis log entry depends on a [user-provided value](8).\nThis log entry depends on a [user-provided value](9).\nThis log entry depends on a [user-provided value](10).\nThis log entry depends on a [user-provided value](11).\nThis log entry depends on a [user-provided value](12).\nThis log entry depends on a [user-provided value](13).\nThis log entry depends on a [user-provided value](14).\nThis log entry depends on a [user-provided value](15).\nThis log entry depends on a [user-provided value](16).\nThis log entry depends on a [user-provided value](17).\nThis log entry depends on a [user-provided value](18).\nThis log entry depends on a [user-provided value](19).\nThis log entry depends on a [user-provided value](20).\nThis log entry depends on a [user-provided value](21).\nThis log entry depends on a [user-provided value](22).\nThis log entry depends on a [user-provided value](23).\nThis log entry depends on a [user-provided value](24).\nThis log entry depends on a [user-provided value](25).\nThis log entry depends on a [user-provided value](26).\nThis log entry depends on a [user-provided value](27).\nThis log entry depends on a [user-provided value](28).\nThis log entry depends on a [user-provided value](29).\nThis log entry depends on a [user-provided value](30).\nThis log entry depends on a [user-provided value](31).\nThis log entry depends on a [user-provided value](32).\nThis log entry depends on a [user-provided value](33).\nThis log entry depends on a [user-provided value](34).\nThis log entry depends on a [user-provided value](35).\nThis log entry depends on a [user-provided value](36).\nThis log entry depends on a [user-provided value](37).\nThis log entry depends on a [user-provided value](38).\nThis log entry depends on a [user-provided value](39).\nThis log entry depends on a [user-provided value](40).\nThis log entry depends on a [user-provided value](41).\nThis log entry depends on a [user-provided value](42).\nThis log entry depends on a [user-provided value](43).\nThis log entry depends on a [user-provided value](44).\nThis log entry depends on a [user-provided value](45).\nThis log entry depends on a [user-provided value](46).\nThis log entry depends on a [user-provided value](47).\nThis log entry depends on a [user-provided value](48).\nThis log entry depends on a [user-provided value](49).\nThis log entry depends on a [user-provided value](50).\nThis log entry depends on a [user-provided value](51).\nThis log entry depends on a [user-provided value](52).\nThis log entry depends on a [user-provided value](53).\nThis log entry depends on a [user-provided value](54).\nThis log entry depends on a [user-provided value](55).\nThis log entry depends on a [user-provided value](56).\nThis log entry depends on a [user-provided value](57).\nThis log entry depends on a [user-provided value](58).\nThis log entry depends on a [user-provided value](59).\nThis log entry depends on a [user-provided value](60).\nThis log entry depends on a [user-provided value](61).\nThis log entry depends on a [user-provided value](62).\nThis log entry depends on a [user-provided value](63).\nThis log entry depends on a [user-provided value](64).\nThis log entry depends on a [user-provided value](65).\nThis log entry depends on a [user-provided value](66).\nThis log entry depends on a [user-provided value](67).\nThis log entry depends on a [user-provided value](68).",
+      "file": "modules/log/logger_global.go",
+      "region": {
+        "startLine": 22,
+        "startColumn": 63,
+        "endColumn": 64
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/log-injection",
+      "rule_index": 33,
+      "level": "warning",
+      "message": "This log entry depends on a [user-provided value](1).\nThis log entry depends on a [user-provided value](2).",
+      "file": "modules/log/misc.go",
+      "region": {
+        "startLine": 24,
+        "startColumn": 28,
+        "endColumn": 34
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/log-injection",
+      "rule_index": 33,
+      "level": "warning",
+      "message": "This log entry depends on a [user-provided value](1).\nThis log entry depends on a [user-provided value](2).\nThis log entry depends on a [user-provided value](3).\nThis log entry depends on a [user-provided value](4).\nThis log entry depends on a [user-provided value](5).\nThis log entry depends on a [user-provided value](6).\nThis log entry depends on a [user-provided value](7).\nThis log entry depends on a [user-provided value](8).\nThis log entry depends on a [user-provided value](9).\nThis log entry depends on a [user-provided value](10).\nThis log entry depends on a [user-provided value](11).\nThis log entry depends on a [user-provided value](12).\nThis log entry depends on a [user-provided value](13).\nThis log entry depends on a [user-provided value](14).\nThis log entry depends on a [user-provided value](15).\nThis log entry depends on a [user-provided value](16).\nThis log entry depends on a [user-provided value](17).\nThis log entry depends on a [user-provided value](18).\nThis log entry depends on a [user-provided value](19).\nThis log entry depends on a [user-provided value](20).\nThis log entry depends on a [user-provided value](21).\nThis log entry depends on a [user-provided value](22).\nThis log entry depends on a [user-provided value](23).\nThis log entry depends on a [user-provided value](24).\nThis log entry depends on a [user-provided value](25).\nThis log entry depends on a [user-provided value](26).\nThis log entry depends on a [user-provided value](27).\nThis log entry depends on a [user-provided value](28).\nThis log entry depends on a [user-provided value](29).\nThis log entry depends on a [user-provided value](30).\nThis log entry depends on a [user-provided value](31).\nThis log entry depends on a [user-provided value](32).\nThis log entry depends on a [user-provided value](33).\nThis log entry depends on a [user-provided value](34).\nThis log entry depends on a [user-provided value](35).\nThis log entry depends on a [user-provided value](36).\nThis log entry depends on a [user-provided value](37).\nThis log entry depends on a [user-provided value](38).\nThis log entry depends on a [user-provided value](39).\nThis log entry depends on a [user-provided value](40).\nThis log entry depends on a [user-provided value](41).\nThis log entry depends on a [user-provided value](42).\nThis log entry depends on a [user-provided value](43).\nThis log entry depends on a [user-provided value](44).\nThis log entry depends on a [user-provided value](45).\nThis log entry depends on a [user-provided value](46).\nThis log entry depends on a [user-provided value](47).\nThis log entry depends on a [user-provided value](48).\nThis log entry depends on a [user-provided value](49).\nThis log entry depends on a [user-provided value](50).\nThis log entry depends on a [user-provided value](51).\nThis log entry depends on a [user-provided value](52).\nThis log entry depends on a [user-provided value](53).\nThis log entry depends on a [user-provided value](54).\nThis log entry depends on a [user-provided value](55).\nThis log entry depends on a [user-provided value](56).\nThis log entry depends on a [user-provided value](57).\nThis log entry depends on a [user-provided value](58).\nThis log entry depends on a [user-provided value](59).\nThis log entry depends on a [user-provided value](60).\nThis log entry depends on a [user-provided value](61).\nThis log entry depends on a [user-provided value](62).\nThis log entry depends on a [user-provided value](63).\nThis log entry depends on a [user-provided value](64).\nThis log entry depends on a [user-provided value](65).\nThis log entry depends on a [user-provided value](66).\nThis log entry depends on a [user-provided value](67).\nThis log entry depends on a [user-provided value](68).",
+      "file": "modules/log/misc.go",
+      "region": {
+        "startLine": 24,
+        "startColumn": 36,
+        "endColumn": 37
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/log-injection",
+      "rule_index": 33,
+      "level": "warning",
+      "message": "This log entry depends on a [user-provided value](1).\nThis log entry depends on a [user-provided value](2).\nThis log entry depends on a [user-provided value](3).\nThis log entry depends on a [user-provided value](4).",
+      "file": "services/context/access_log.go",
+      "region": {
+        "startLine": 108,
+        "startColumn": 54,
+        "endColumn": 66
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "cmd/embedded.go",
+      "region": {
+        "startLine": 269,
+        "startColumn": 8,
+        "endColumn": 12
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "models/asymkey/ssh_key_authorized_keys.go",
+      "region": {
+        "startLine": 134,
+        "startColumn": 8,
+        "endColumn": 9
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "modules/assetfs/embed.go",
+      "region": {
+        "startLine": 309,
+        "startColumn": 8,
+        "endColumn": 14
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "modules/util/rotatingfilewriter/writer.go",
+      "region": {
+        "startLine": 194,
+        "startColumn": 8,
+        "endColumn": 10
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/asymkey/ssh_key_authorized_keys.go",
+      "region": {
+        "startLine": 53,
+        "startColumn": 3,
+        "endColumn": 4
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/asymkey/ssh_key_authorized_keys.go",
+      "region": {
+        "startLine": 77,
+        "startColumn": 2,
+        "endColumn": 3
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/asymkey/ssh_key_authorized_principals.go",
+      "region": {
+        "startLine": 64,
+        "startColumn": 3,
+        "endColumn": 4
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/asymkey/ssh_key_authorized_principals.go",
+      "region": {
+        "startLine": 86,
+        "startColumn": 2,
+        "endColumn": 3
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/pull/merge_prepare.go",
+      "region": {
+        "startLine": 153,
+        "startColumn": 8,
+        "endColumn": 30
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/unhandled-writable-file-close",
+      "rule_index": 40,
+      "level": "warning",
+      "message": "File handle may be writable as a result of data flow from a [call to OpenFile](1) and closing it may result in data loss upon failure, which is not handled explicitly.",
+      "file": "services/pull/temp_repo.go",
+      "region": {
+        "startLine": 113,
+        "startColumn": 9,
+        "endColumn": 10
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/index-out-of-bounds",
+      "rule_index": 42,
+      "level": "warning",
+      "message": "Off-by-one index comparison against length may lead to out-of-bounds [read](1).",
+      "file": "modules/util/path.go",
+      "region": {
+        "startLine": 334,
+        "startColumn": 5,
+        "endColumn": 42
+      },
+      "kind": "fail",
+      "properties": {}
+    },
+    {
+      "rule_id": "go/index-out-of-bounds",
+      "rule_index": 42,
+      "level": "warning",
+      "message": "Off-by-one index comparison against length may lead to out-of-bounds [read](1).",
+      "file": "modules/util/path.go",
+      "region": {
+        "startLine": 334,
+        "startColumn": 5,
+        "endColumn": 18
+      },
+      "kind": "fail",
       "properties": {}
     }
   ],

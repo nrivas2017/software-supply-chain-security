@@ -1,124 +1,121 @@
-2026-05-30 01:17:44 | INFO | Usando CodeQL CLI: /usr/local/bin/codeql
-2026-05-30 01:17:44 | INFO | === Diagnóstico del Entorno CodeQL ===
-2026-05-30 01:17:44 | INFO | ✓ CodeQL CLI: CodeQL command-line toolchain release 2.25.1.
-2026-05-30 01:17:44 | INFO | ✓ Node.js: v20.20.2
-2026-05-30 01:17:44 | INFO | ✓ npm: 10.8.2
-2026-05-30 01:17:44 | INFO | Verificando query packs...
-2026-05-30 01:17:45 | WARNING | ⚠ Query pack codeql/python-queries no disponible
-2026-05-30 01:17:45 | INFO | ✓ Query pack codeql/javascript-queries disponible
-2026-05-30 01:17:46 | WARNING | ⚠ Query pack codeql/java-queries no disponible
-2026-05-30 01:17:46 | INFO | === Fin Diagnóstico ===
+2026-06-08 14:01:00 | INFO | Usando CodeQL CLI: /usr/local/bin/codeql
+2026-06-08 14:01:00 | INFO | === Diagnóstico del Entorno CodeQL ===
+2026-06-08 14:01:01 | INFO | ✓ CodeQL CLI: CodeQL command-line toolchain release 2.25.1.
+2026-06-08 14:01:01 | INFO | ✓ Node.js: v20.20.2
+2026-06-08 14:01:01 | INFO | ✓ npm: 10.8.2
+2026-06-08 14:01:01 | INFO | Verificando query packs...
+2026-06-08 14:01:02 | WARNING | ⚠ Query pack codeql/python-queries no disponible
+2026-06-08 14:01:02 | INFO | ✓ Query pack codeql/javascript-queries disponible
+2026-06-08 14:01:03 | WARNING | ⚠ Query pack codeql/java-queries no disponible
+2026-06-08 14:01:03 | INFO | === Fin Diagnóstico ===
 
-2026-05-30 01:17:46 | INFO | [1/9] Procesando repositorio data/repos/Ghost
-2026-05-30 01:18:46 | INFO | Lenguaje detectado en Ghost: javascript
-2026-05-30 01:18:46 | INFO | Directorio temporal CodeQL: /tmp/codeql_analysis
-2026-05-30 01:18:46 | INFO | Creando base de datos CodeQL para Ghost (lenguaje: javascript)...
-2026-05-30 01:30:54 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 01:34:55 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/Ghost_temp.sarif (4853823 bytes)
-2026-05-30 01:34:55 | INFO | SARIF output length: 4853823 bytes
-2026-05-30 01:34:55 | INFO | parse_sarif: recibiendo 4853823 bytes
-2026-05-30 01:34:55 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 01:34:55 | INFO | parse_sarif: 541 resultados en run[0]
-2026-05-30 01:34:55 | INFO | parse_sarif: total_issues=541
-2026-05-30 01:34:55 | INFO | save_analysis: Ghost con 541 issues
-2026-05-30 01:34:56 | INFO | Analisis CodeQL guardado en results/Ghost-codeql.json
-2026-05-30 01:34:56 | INFO | [2/9] Procesando repositorio data/repos/apache-superset
-2026-05-30 01:36:07 | INFO | Lenguaje detectado en apache-superset: javascript
-2026-05-30 01:36:07 | INFO | Creando base de datos CodeQL para apache-superset (lenguaje: javascript)...
-2026-05-30 01:47:03 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 01:49:24 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/apache-superset_temp.sarif (4479405 bytes)
-2026-05-30 01:49:24 | INFO | SARIF output length: 4479405 bytes
-2026-05-30 01:49:24 | INFO | parse_sarif: recibiendo 4479405 bytes
-2026-05-30 01:49:24 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 01:49:24 | INFO | parse_sarif: 136 resultados en run[0]
-2026-05-30 01:49:24 | INFO | parse_sarif: total_issues=136
-2026-05-30 01:49:24 | INFO | save_analysis: apache-superset con 136 issues
-2026-05-30 01:49:24 | INFO | Analisis CodeQL guardado en results/apache-superset-codeql.json
-2026-05-30 01:49:24 | INFO | [3/9] Procesando repositorio data/repos/gitea
-2026-05-30 01:50:16 | INFO | Lenguaje detectado en gitea: go
-2026-05-30 01:50:16 | INFO | Creando base de datos CodeQL para gitea (lenguaje: go)...
-2026-05-30 01:59:11 | INFO | Query pack codeql/go-queries no disponible. Intentando descargar...
-2026-05-30 01:59:11 | INFO | Descargando query pack para go...
-2026-05-30 01:59:15 | INFO | ✓ Query pack para go descargado exitosamente
-2026-05-30 01:59:15 | INFO | Usando query pack: codeql/go-queries
-2026-05-30 02:00:14 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/gitea_temp.sarif (2511435 bytes)
-2026-05-30 02:00:14 | INFO | SARIF output length: 2511435 bytes
-2026-05-30 02:00:15 | INFO | parse_sarif: recibiendo 2511435 bytes
-2026-05-30 02:00:15 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:00:15 | INFO | parse_sarif: 56 resultados en run[0]
-2026-05-30 02:00:15 | INFO | parse_sarif: total_issues=56
-2026-05-30 02:00:15 | INFO | save_analysis: gitea con 56 issues
-2026-05-30 02:00:15 | INFO | Analisis CodeQL guardado en results/gitea-codeql.json
-2026-05-30 02:00:15 | INFO | [4/9] Procesando repositorio data/repos/hoppscotch
-2026-05-30 02:00:34 | INFO | Lenguaje detectado en hoppscotch: javascript
-2026-05-30 02:00:34 | INFO | Creando base de datos CodeQL para hoppscotch (lenguaje: javascript)...
-2026-05-30 02:03:45 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:04:43 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/hoppscotch_temp.sarif (1225320 bytes)
-2026-05-30 02:04:43 | INFO | SARIF output length: 1225320 bytes
-2026-05-30 02:04:43 | INFO | parse_sarif: recibiendo 1225320 bytes
-2026-05-30 02:04:43 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:04:43 | INFO | parse_sarif: 39 resultados en run[0]
-2026-05-30 02:04:43 | INFO | parse_sarif: total_issues=39
-2026-05-30 02:04:43 | INFO | save_analysis: hoppscotch con 39 issues
-2026-05-30 02:04:43 | INFO | Analisis CodeQL guardado en results/hoppscotch-codeql.json
-2026-05-30 02:04:43 | INFO | [5/9] Procesando repositorio data/repos/librenms
-2026-05-30 02:06:01 | INFO | Lenguaje detectado en librenms: javascript
-2026-05-30 02:06:01 | INFO | Creando base de datos CodeQL para librenms (lenguaje: javascript)...
-2026-05-30 02:11:50 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:12:19 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/librenms_temp.sarif (942041 bytes)
-2026-05-30 02:12:19 | INFO | SARIF output length: 942041 bytes
-2026-05-30 02:12:19 | INFO | parse_sarif: recibiendo 942041 bytes
-2026-05-30 02:12:19 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:12:19 | INFO | parse_sarif: 102 resultados en run[0]
-2026-05-30 02:12:19 | INFO | parse_sarif: total_issues=102
-2026-05-30 02:12:19 | INFO | save_analysis: librenms con 102 issues
-2026-05-30 02:12:19 | INFO | Analisis CodeQL guardado en results/librenms-codeql.json
-2026-05-30 02:12:19 | INFO | [6/9] Procesando repositorio data/repos/mastodon
-2026-05-30 02:13:05 | INFO | Lenguaje detectado en mastodon: javascript
-2026-05-30 02:13:05 | INFO | Creando base de datos CodeQL para mastodon (lenguaje: javascript)...
-2026-05-30 02:17:04 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:17:44 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/mastodon_temp.sarif (2420509 bytes)
-2026-05-30 02:17:44 | INFO | SARIF output length: 2420509 bytes
-2026-05-30 02:17:44 | INFO | parse_sarif: recibiendo 2420509 bytes
-2026-05-30 02:17:44 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:17:44 | INFO | parse_sarif: 71 resultados en run[0]
-2026-05-30 02:17:44 | INFO | parse_sarif: total_issues=71
-2026-05-30 02:17:44 | INFO | save_analysis: mastodon con 71 issues
-2026-05-30 02:17:44 | INFO | Analisis CodeQL guardado en results/mastodon-codeql.json
-2026-05-30 02:17:44 | INFO | [7/9] Procesando repositorio data/repos/snipe-it
-2026-05-30 02:19:02 | INFO | Lenguaje detectado en snipe-it: javascript
-2026-05-30 02:19:02 | INFO | Creando base de datos CodeQL para snipe-it (lenguaje: javascript)...
-2026-05-30 02:21:08 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:21:46 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/snipe-it_temp.sarif (750114 bytes)
-2026-05-30 02:21:46 | INFO | SARIF output length: 750114 bytes
-2026-05-30 02:21:46 | INFO | parse_sarif: recibiendo 750114 bytes
-2026-05-30 02:21:46 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:21:46 | INFO | parse_sarif: 250 resultados en run[0]
-2026-05-30 02:21:46 | INFO | parse_sarif: total_issues=250
-2026-05-30 02:21:46 | INFO | save_analysis: snipe-it con 250 issues
-2026-05-30 02:21:46 | INFO | Analisis CodeQL guardado en results/snipe-it-codeql.json
-2026-05-30 02:21:46 | INFO | [8/9] Procesando repositorio data/repos/wiki
-2026-05-30 02:21:55 | INFO | Lenguaje detectado en wiki: javascript
-2026-05-30 02:21:55 | INFO | Creando base de datos CodeQL para wiki (lenguaje: javascript)...
-2026-05-30 02:22:46 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:23:19 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/wiki_temp.sarif (451115 bytes)
-2026-05-30 02:23:19 | INFO | SARIF output length: 451115 bytes
-2026-05-30 02:23:19 | INFO | parse_sarif: recibiendo 451115 bytes
-2026-05-30 02:23:19 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:23:19 | INFO | parse_sarif: 14 resultados en run[0]
-2026-05-30 02:23:19 | INFO | parse_sarif: total_issues=14
-2026-05-30 02:23:19 | INFO | save_analysis: wiki con 14 issues
-2026-05-30 02:23:19 | INFO | Analisis CodeQL guardado en results/wiki-codeql.json
-2026-05-30 02:23:19 | INFO | [9/9] Procesando repositorio data/repos/zoneminder
-2026-05-30 02:24:04 | INFO | Lenguaje detectado en zoneminder: javascript
-2026-05-30 02:24:04 | INFO | Creando base de datos CodeQL para zoneminder (lenguaje: javascript)...
-2026-05-30 02:27:15 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.10/codeql-suites/javascript-security-and-quality.qls
-2026-05-30 02:29:23 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/zoneminder_temp.sarif (3244311 bytes)
-2026-05-30 02:29:23 | INFO | SARIF output length: 3244311 bytes
-2026-05-30 02:29:23 | INFO | parse_sarif: recibiendo 3244311 bytes
-2026-05-30 02:29:23 | INFO | parse_sarif: 1 runs encontrados
-2026-05-30 02:29:23 | INFO | parse_sarif: 778 resultados en run[0]
-2026-05-30 02:29:23 | INFO | parse_sarif: total_issues=778
-2026-05-30 02:29:23 | INFO | save_analysis: zoneminder con 778 issues
-2026-05-30 02:29:23 | INFO | Analisis CodeQL guardado en results/zoneminder-codeql.json
-2026-05-30 02:29:23 | INFO | Resumen final | total_repos=9 | repos_analizados=9 | archivos_generados=9 | omitidos=0 | errores=0
+2026-06-08 14:01:03 | INFO | [1/9] Procesando repositorio data/repos/Ghost
+2026-06-08 14:01:57 | INFO | Lenguaje detectado en Ghost: javascript
+2026-06-08 14:01:57 | INFO | Directorio temporal CodeQL: /tmp/codeql_analysis
+2026-06-08 14:01:57 | INFO | Creando base de datos CodeQL para Ghost (lenguaje: javascript)...
+2026-06-08 14:14:12 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 14:17:57 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/Ghost_temp.sarif (4853823 bytes)
+2026-06-08 14:17:57 | INFO | SARIF output length: 4853823 bytes
+2026-06-08 14:17:57 | INFO | parse_sarif: recibiendo 4853823 bytes
+2026-06-08 14:17:57 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 14:17:57 | INFO | parse_sarif: 541 resultados en run[0]
+2026-06-08 14:17:57 | INFO | parse_sarif: total_issues=541
+2026-06-08 14:17:57 | INFO | save_analysis: Ghost con 541 issues
+2026-06-08 14:17:57 | INFO | Analisis CodeQL guardado en results/Ghost-codeql.json
+2026-06-08 14:17:57 | INFO | [2/9] Procesando repositorio data/repos/apache-superset
+2026-06-08 14:19:12 | INFO | Lenguaje detectado en apache-superset: javascript
+2026-06-08 14:19:12 | INFO | Creando base de datos CodeQL para apache-superset (lenguaje: javascript)...
+2026-06-08 14:29:06 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 14:31:18 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/apache-superset_temp.sarif (4479405 bytes)
+2026-06-08 14:31:18 | INFO | SARIF output length: 4479405 bytes
+2026-06-08 14:31:18 | INFO | parse_sarif: recibiendo 4479405 bytes
+2026-06-08 14:31:18 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 14:31:18 | INFO | parse_sarif: 136 resultados en run[0]
+2026-06-08 14:31:18 | INFO | parse_sarif: total_issues=136
+2026-06-08 14:31:18 | INFO | save_analysis: apache-superset con 136 issues
+2026-06-08 14:31:18 | INFO | Analisis CodeQL guardado en results/apache-superset-codeql.json
+2026-06-08 14:31:18 | INFO | [3/9] Procesando repositorio data/repos/gitea
+2026-06-08 14:32:33 | INFO | Lenguaje detectado en gitea: go
+2026-06-08 14:32:33 | INFO | Creando base de datos CodeQL para gitea (lenguaje: go)...
+2026-06-08 14:41:43 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/go-queries/1.6.4/codeql-suites/go-security-and-quality.qls
+2026-06-08 14:42:54 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/gitea_temp.sarif (2680751 bytes)
+2026-06-08 14:42:54 | INFO | SARIF output length: 2680751 bytes
+2026-06-08 14:42:54 | INFO | parse_sarif: recibiendo 2680751 bytes
+2026-06-08 14:42:54 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 14:42:54 | INFO | parse_sarif: 73 resultados en run[0]
+2026-06-08 14:42:54 | INFO | parse_sarif: total_issues=73
+2026-06-08 14:42:54 | INFO | save_analysis: gitea con 73 issues
+2026-06-08 14:42:54 | INFO | Analisis CodeQL guardado en results/gitea-codeql.json
+2026-06-08 14:42:54 | INFO | [4/9] Procesando repositorio data/repos/hoppscotch
+2026-06-08 14:43:17 | INFO | Lenguaje detectado en hoppscotch: javascript
+2026-06-08 14:43:17 | INFO | Creando base de datos CodeQL para hoppscotch (lenguaje: javascript)...
+2026-06-08 14:46:43 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 14:47:37 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/hoppscotch_temp.sarif (1225320 bytes)
+2026-06-08 14:47:37 | INFO | SARIF output length: 1225320 bytes
+2026-06-08 14:47:38 | INFO | parse_sarif: recibiendo 1225320 bytes
+2026-06-08 14:47:38 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 14:47:38 | INFO | parse_sarif: 39 resultados en run[0]
+2026-06-08 14:47:38 | INFO | parse_sarif: total_issues=39
+2026-06-08 14:47:38 | INFO | save_analysis: hoppscotch con 39 issues
+2026-06-08 14:47:38 | INFO | Analisis CodeQL guardado en results/hoppscotch-codeql.json
+2026-06-08 14:47:38 | INFO | [5/9] Procesando repositorio data/repos/librenms
+2026-06-08 14:48:53 | INFO | Lenguaje detectado en librenms: javascript
+2026-06-08 14:48:53 | INFO | Creando base de datos CodeQL para librenms (lenguaje: javascript)...
+2026-06-08 14:54:50 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 14:55:18 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/librenms_temp.sarif (942041 bytes)
+2026-06-08 14:55:18 | INFO | SARIF output length: 942041 bytes
+2026-06-08 14:55:18 | INFO | parse_sarif: recibiendo 942041 bytes
+2026-06-08 14:55:18 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 14:55:18 | INFO | parse_sarif: 102 resultados en run[0]
+2026-06-08 14:55:18 | INFO | parse_sarif: total_issues=102
+2026-06-08 14:55:18 | INFO | save_analysis: librenms con 102 issues
+2026-06-08 14:55:18 | INFO | Analisis CodeQL guardado en results/librenms-codeql.json
+2026-06-08 14:55:18 | INFO | [6/9] Procesando repositorio data/repos/mastodon
+2026-06-08 14:56:10 | INFO | Lenguaje detectado en mastodon: javascript
+2026-06-08 14:56:10 | INFO | Creando base de datos CodeQL para mastodon (lenguaje: javascript)...
+2026-06-08 15:00:13 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 15:00:53 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/mastodon_temp.sarif (2420509 bytes)
+2026-06-08 15:00:53 | INFO | SARIF output length: 2420509 bytes
+2026-06-08 15:00:53 | INFO | parse_sarif: recibiendo 2420509 bytes
+2026-06-08 15:00:53 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 15:00:53 | INFO | parse_sarif: 71 resultados en run[0]
+2026-06-08 15:00:53 | INFO | parse_sarif: total_issues=71
+2026-06-08 15:00:53 | INFO | save_analysis: mastodon con 71 issues
+2026-06-08 15:00:53 | INFO | Analisis CodeQL guardado en results/mastodon-codeql.json
+2026-06-08 15:00:53 | INFO | [7/9] Procesando repositorio data/repos/snipe-it
+2026-06-08 15:02:12 | INFO | Lenguaje detectado en snipe-it: javascript
+2026-06-08 15:02:12 | INFO | Creando base de datos CodeQL para snipe-it (lenguaje: javascript)...
+2026-06-08 15:04:25 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 15:05:02 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/snipe-it_temp.sarif (750114 bytes)
+2026-06-08 15:05:02 | INFO | SARIF output length: 750114 bytes
+2026-06-08 15:05:02 | INFO | parse_sarif: recibiendo 750114 bytes
+2026-06-08 15:05:02 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 15:05:02 | INFO | parse_sarif: 250 resultados en run[0]
+2026-06-08 15:05:02 | INFO | parse_sarif: total_issues=250
+2026-06-08 15:05:02 | INFO | save_analysis: snipe-it con 250 issues
+2026-06-08 15:05:02 | INFO | Analisis CodeQL guardado en results/snipe-it-codeql.json
+2026-06-08 15:05:02 | INFO | [8/9] Procesando repositorio data/repos/wiki
+2026-06-08 15:05:13 | INFO | Lenguaje detectado en wiki: javascript
+2026-06-08 15:05:13 | INFO | Creando base de datos CodeQL para wiki (lenguaje: javascript)...
+2026-06-08 15:06:09 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 15:06:42 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/wiki_temp.sarif (451115 bytes)
+2026-06-08 15:06:42 | INFO | SARIF output length: 451115 bytes
+2026-06-08 15:06:42 | INFO | parse_sarif: recibiendo 451115 bytes
+2026-06-08 15:06:42 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 15:06:42 | INFO | parse_sarif: 14 resultados en run[0]
+2026-06-08 15:06:42 | INFO | parse_sarif: total_issues=14
+2026-06-08 15:06:42 | INFO | save_analysis: wiki con 14 issues
+2026-06-08 15:06:42 | INFO | Analisis CodeQL guardado en results/wiki-codeql.json
+2026-06-08 15:06:42 | INFO | [9/9] Procesando repositorio data/repos/zoneminder
+2026-06-08 15:07:32 | INFO | Lenguaje detectado en zoneminder: javascript
+2026-06-08 15:07:32 | INFO | Creando base de datos CodeQL para zoneminder (lenguaje: javascript)...
+2026-06-08 15:10:42 | INFO | Usando suite compilada: /home/vscode/.codeql/packages/codeql/javascript-queries/2.3.11/codeql-suites/javascript-security-and-quality.qls
+2026-06-08 15:12:40 | INFO | SARIF guardado en: /workspaces/software-supply-chain-security/results/zoneminder_temp.sarif (3244311 bytes)
+2026-06-08 15:12:40 | INFO | SARIF output length: 3244311 bytes
+2026-06-08 15:12:40 | INFO | parse_sarif: recibiendo 3244311 bytes
+2026-06-08 15:12:40 | INFO | parse_sarif: 1 runs encontrados
+2026-06-08 15:12:40 | INFO | parse_sarif: 778 resultados en run[0]
+2026-06-08 15:12:40 | INFO | parse_sarif: total_issues=778
+2026-06-08 15:12:40 | INFO | save_analysis: zoneminder con 778 issues
+2026-06-08 15:12:40 | INFO | Analisis CodeQL guardado en results/zoneminder-codeql.json
+2026-06-08 15:12:40 | INFO | Resumen final | total_repos=9 | repos_analizados=9 | archivos_generados=9 | omitidos=0 | errores=0

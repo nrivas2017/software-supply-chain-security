@@ -1,0 +1,401 @@
+{
+  "total_vulnerabilities": 35,
+  "vulnerabilities_by_severity": {
+    "critical": 5,
+    "high": 11,
+    "medium": 12,
+    "low": 7
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "@cypress/request",
+      "current_version": "2.88.12",
+      "vuln_id": "GHSA-p8p7-x288-28g6",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "Server-Side Request Forgery in Request",
+      "cwe": "N/A",
+      "cvss_score": 6.1,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-r5fr-rjxr-66jc",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "cwe": "N/A",
+      "cvss_score": 8.1,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash-es",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-r5fr-rjxr-66jc",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "cwe": "N/A",
+      "cvss_score": 8.1,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "brace-expansion",
+      "current_version": "5.0.5",
+      "vuln_id": "GHSA-jxxr-4gwj-5jf2",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "brace-expansion: Large numeric range defeats documented `max` DoS protection",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "qs",
+      "current_version": "6.10.4",
+      "vuln_id": "GHSA-6rw7-vpxm-498p",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+      "cwe": "N/A",
+      "cvss_score": 3.7,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "js-yaml",
+      "current_version": "4.1.0",
+      "vuln_id": "GHSA-mh29-5h37-fv8m",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "js-yaml has prototype pollution in merge (<<)",
+      "cwe": "N/A",
+      "cvss_score": 5.3,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "js-yaml",
+      "current_version": "4.1.0",
+      "vuln_id": "GHSA-mh29-5h37-fv8m",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "js-yaml has prototype pollution in merge (<<)",
+      "cwe": "N/A",
+      "cvss_score": 5.3,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "qs",
+      "current_version": "6.10.4",
+      "vuln_id": "GHSA-w7fw-mjwx-w883",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "qs's arrayLimit bypass in comma parsing allows denial of service",
+      "cwe": "N/A",
+      "cvss_score": 3.7,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash-es",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-xxjr-mmjv-4gpg",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-f23m-r3pf-42rh",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "lodash-es",
+      "current_version": "4.17.21",
+      "vuln_id": "GHSA-f23m-r3pf-42rh",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "yaml",
+      "current_version": "1.10.2",
+      "vuln_id": "GHSA-48c2-rrv3-qjmp",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "yaml is vulnerable to Stack Overflow via deeply nested YAML collections",
+      "cwe": "N/A",
+      "cvss_score": 4.3,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "uuid",
+      "current_version": "3.4.0",
+      "vuln_id": "GHSA-w5hq-g745-h8pq",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "cwe": "N/A",
+      "cvss_score": 7.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "uuid",
+      "current_version": "8.3.2",
+      "vuln_id": "GHSA-w5hq-g745-h8pq",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "cwe": "N/A",
+      "cvss_score": 7.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "uuid",
+      "current_version": "8.3.2",
+      "vuln_id": "GHSA-w5hq-g745-h8pq",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "cwe": "N/A",
+      "cvss_score": 7.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "serialize-javascript",
+      "current_version": "6.0.2",
+      "vuln_id": "GHSA-qj8w-gfj5-8c6v",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+      "cwe": "N/A",
+      "cvss_score": 5.9,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "ws",
+      "current_version": "8.18.3",
+      "vuln_id": "GHSA-58qx-3vcg-4xpx",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "ws: Uninitialized memory disclosure",
+      "cwe": "N/A",
+      "cvss_score": 4.4,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "superset-cypress",
+      "current_version": "1.0.0",
+      "vuln_id": "GHSA-4vf8-mc4r-r3v2",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Malware in superset-cypress",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "superset-websocket",
+      "current_version": "0.0.1",
+      "vuln_id": "GHSA-qrv4-fch7-39w7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Malware in superset-websocket",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-6j2x-vhqr-qr7q",
+      "vuln_severity": "critical",
+      "fix_version": "N/A",
+      "message": "vm2 sandbox escape via JSPI-backed Promise `.finally()` species bypass",
+      "cwe": "N/A",
+      "cvss_score": 9.8,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-76w7-j9cq-rx2j",
+      "vuln_severity": "critical",
+      "fix_version": "N/A",
+      "message": "vm2 is Vulnerable to Sandbox Breakout Through Promise Species",
+      "cwe": "N/A",
+      "cvss_score": 10,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-m4wx-m65x-ghrr",
+      "vuln_severity": "critical",
+      "fix_version": "N/A",
+      "message": "vm2 has a CVE-2023-37903 patch bypass: nesting:true without explicit require still allows full RCE",
+      "cwe": "N/A",
+      "cvss_score": 10,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-rp36-8xq3-r6c4",
+      "vuln_severity": "critical",
+      "fix_version": "N/A",
+      "message": "NodeVM builtin denylist bypass via process and inspector/promises allows host code execution",
+      "cwe": "N/A",
+      "cvss_score": 10,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-v6mx-mf47-r5wg",
+      "vuln_severity": "critical",
+      "fix_version": "N/A",
+      "message": "vm2 has a Sandbox Escape issue",
+      "cwe": "N/A",
+      "cvss_score": 10,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "d3-color",
+      "current_version": "1.4.1",
+      "vuln_id": "GHSA-36jr-mh4h-2g58",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "d3-color vulnerable to ReDoS",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "d3-color",
+      "current_version": "2.0.0",
+      "vuln_id": "GHSA-36jr-mh4h-2g58",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "d3-color vulnerable to ReDoS",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "dawidd6/action-download-artifact",
+      "current_version": "b6e2e70617bc3265edd6dab6c906732b2f1ae151",
+      "vuln_id": "GHSA-5xr6-xhww-33m4",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "Artifact poisoning vulnerability in action-download-artifact v5 and earlier",
+      "cwe": "N/A",
+      "cvss_score": 8.7,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "dawidd6/action-download-artifact",
+      "current_version": "b6e2e70617bc3265edd6dab6c906732b2f1ae151",
+      "vuln_id": "GHSA-5xr6-xhww-33m4",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "Artifact poisoning vulnerability in action-download-artifact v5 and earlier",
+      "cwe": "N/A",
+      "cvss_score": 8.7,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "serialize-javascript",
+      "current_version": "6.0.2",
+      "vuln_id": "GHSA-5c6j-r48x-rmvq",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+      "cwe": "N/A",
+      "cvss_score": 8.1,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-c4cf-2hgv-2qv6",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "vm2's Bridge Proxy set trap ignores receiver parameter, enabling host object property injection via prototype chain",
+      "cwe": "N/A",
+      "cvss_score": 8.6,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-m5q2-4fm3-vfqp",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "vm2 has a sandbox escape via unblocked cross-realm Symbol.for keys + missing bridge write-trap symbol checks",
+      "cwe": "N/A",
+      "cvss_score": 8.7,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-r9pm-gxmw-wv6p",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "NodeVM network builtin exclusions bypass via internal _http_client and _http_server",
+      "cwe": "N/A",
+      "cvss_score": 8.6,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-9g8x-92q2-p28f",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "NodeVM observability builtins leak host process and HTTP request data",
+      "cwe": "N/A",
+      "cvss_score": 4.6,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "vm2",
+      "current_version": "3.11.3",
+      "vuln_id": "GHSA-q3fm-4wcw-g57x",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "vm2 setup-sandbox.js violates Defense Invariant #11 in stack-trace formatter",
+      "cwe": "N/A",
+      "cvss_score": 2.1,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/software-supply-chain-security/data/repos/apache-superset"
+  }
+}

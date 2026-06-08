@@ -1,0 +1,60 @@
+{
+  "total_vulnerabilities": 4,
+  "vulnerabilities_by_severity": {
+    "critical": 0,
+    "high": 2,
+    "medium": 2,
+    "low": 0
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "fast-uri",
+      "current_version": "3.1.0",
+      "vuln_id": "GHSA-q3j6-qgpj-74h6",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "fast-uri vulnerable to path traversal via percent-encoded dot segments",
+      "cwe": "N/A",
+      "cvss_score": 7.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "brace-expansion",
+      "current_version": "5.0.5",
+      "vuln_id": "GHSA-jxxr-4gwj-5jf2",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "brace-expansion: Large numeric range defeats documented `max` DoS protection",
+      "cwe": "N/A",
+      "cvss_score": 6.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "fast-uri",
+      "current_version": "3.1.0",
+      "vuln_id": "GHSA-v39h-62p7-jpjc",
+      "vuln_severity": "high",
+      "fix_version": "N/A",
+      "message": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+      "cwe": "N/A",
+      "cvss_score": 7.5,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "ws",
+      "current_version": "8.20.0",
+      "vuln_id": "GHSA-58qx-3vcg-4xpx",
+      "vuln_severity": "medium",
+      "fix_version": "N/A",
+      "message": "ws: Uninitialized memory disclosure",
+      "cwe": "N/A",
+      "cvss_score": 4.4,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/software-supply-chain-security/data/repos/gitea"
+  }
+}

@@ -18,7 +18,7 @@
         "endLine": 86,
         "endColumn": 5
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -32,7 +32,7 @@
         "startColumn": 15,
         "endColumn": 30
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -46,7 +46,7 @@
         "startColumn": 27,
         "endColumn": 125
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -61,7 +61,7 @@
         "endLine": 61,
         "endColumn": 2
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -76,7 +76,7 @@
         "endLine": 96,
         "endColumn": 2
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -91,7 +91,7 @@
         "endLine": 71,
         "endColumn": 4
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -106,7 +106,7 @@
         "endLine": 376,
         "endColumn": 4
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -120,7 +120,7 @@
         "startColumn": 11,
         "endColumn": 25
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -134,7 +134,7 @@
         "startColumn": 9,
         "endColumn": 12
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -148,7 +148,7 @@
         "startColumn": 60,
         "endColumn": 61
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -162,7 +162,7 @@
         "startColumn": 25,
         "endColumn": 33
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -176,7 +176,7 @@
         "startColumn": 11,
         "endColumn": 29
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -190,7 +190,7 @@
         "startColumn": 7,
         "endColumn": 9
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     },
     {
@@ -204,7 +204,7 @@
         "startColumn": 9,
         "endColumn": 12
       },
-      "kind": "notApplicable",
+      "kind": "fail",
       "properties": {}
     }
   ],

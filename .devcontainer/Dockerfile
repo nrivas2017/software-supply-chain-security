@@ -25,7 +25,7 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list && \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Go and build tools (required for CodeQL Go analysis)
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential \
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential libsqlite3-dev \
     && curl -sL https://go.dev/dl/go1.22.3.linux-amd64.tar.gz | tar -xz -C /usr/local \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
@@ -43,6 +43,7 @@ RUN curl -sSfL https://github.com/github/codeql-cli-binaries/releases/download/v
 RUN codeql pack download codeql/python-queries \
     && codeql pack download codeql/javascript-queries \
     && codeql pack download codeql/java-queries \
+    && codeql pack download codeql/go-queries \
     || echo "Note: Some query packs may not be available in offline mode. They will be downloaded on first use."
 
 # Verify CodeQL, Grype, Node.js, and npm installation

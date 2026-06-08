@@ -46,6 +46,7 @@ import logging
 import shutil
 import subprocess
 from pathlib import Path
+import concurrent.futures
 
 
 RUTA_BASE_GRYPE = Path(__file__).resolve().parents[1]
@@ -226,8 +227,29 @@ class GrypeAnalyzer:
 
         return ruta_raw, ruta_normalizado
 
+    def _procesar_un_repositorio(self, repo_path: str, indice: int, total: int) -> tuple[str, int]:
+        """Procesa un solo repositorio para Grype. Retorna estado ('exito', 'omitido', 'error') y archivos generados."""
+        ruta_repo = self.project_root / repo_path
+
+        try:
+            if self.dry_run:
+                LOGGER.info("[%s/%s] Dry-run: would scan %s", indice, total, repo_path)
+                return "omitido", 0
+
+            LOGGER.info("[%s/%s] Scanning %s with Grype...", indice, total, repo_path)
+            grype_output = self.run_grype(repo_path)
+            analysis = self.parse_grype_output(grype_output)
+            self.save_analysis(ruta_repo.name, grype_output, analysis)
+            
+            return "exito", 2  # Genera 2 archivos (raw y normalizado)
+            
+        except Exception as error:
+            self._eliminar_archivos_parciales(ruta_repo.name)
+            LOGGER.error("Error scanning %s: %s", repo_path, error)
+            return "error", 0
+
     def run(self):
-        """Orquesta el descubrimiento y análisis con Grype."""
+        """Orquesta el descubrimiento y análisis con Grype en paralelo."""
         repositorios = self.discover_repositories()
         self._validar_directorio_salida()
 
@@ -245,45 +267,30 @@ class GrypeAnalyzer:
         omitidos = 0
         errores = 0
 
-        for indice, repo_path in enumerate(repositorios, start=1):
-            ruta_repo = self.project_root / repo_path
+        max_workers = 4
+        LOGGER.info(f"Iniciando análisis de Grype en paralelo ({max_workers} hilos)...")
 
-            try:
-                if self.dry_run:
-                    LOGGER.info(
-                        f"[{indice}/{len(repositorios)}] Dry-run: would scan {repo_path}"
-                    )
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futuros = {
+                executor.submit(self._procesar_un_repositorio, repo_path, indice + 1, len(repositorios)): repo_path
+                for indice, repo_path in enumerate(repositorios)
+            }
+
+            for futuro in concurrent.futures.as_completed(futuros):
+                estado, cant_archivos = futuro.result()
+                if estado == "exito":
+                    repositorios_analizados += 1
+                    archivos_generados += cant_archivos
+                elif estado == "omitido":
                     omitidos += 1
-                    continue
-
-                LOGGER.info(
-                    f"[{indice}/{len(repositorios)}] Scanning {repo_path} with Grype..."
-                )
-
-                # Ejecutar análisis
-                grype_output = self.run_grype(repo_path)
-
-                # Procesar resultados
-                analysis = self.parse_grype_output(grype_output)
-
-                # Guardar ambos formatos
-                self.save_analysis(ruta_repo.name, grype_output, analysis)
-
-                repositorios_analizados += 1
-                archivos_generados += 2  # raw + normalizado
-
-            except Exception as error:
-                errores += 1
-                self._eliminar_archivos_parciales(ruta_repo.name)
-                LOGGER.error(f"Error scanning {repo_path}: {error}")
+                elif estado == "error":
+                    errores += 1
 
         LOGGER.info(
-            (
-                f"Summary | total_repos={len(repositorios)} | "
-                f"repos_scanned={repositorios_analizados} | "
-                f"files_generated={archivos_generados} | "
-                f"skipped={omitidos} | errors={errores}"
-            )
+            f"Summary | total_repos={len(repositorios)} | "
+            f"repos_scanned={repositorios_analizados} | "
+            f"files_generated={archivos_generados} | "
+            f"skipped={omitidos} | errors={errores}"
         )
 
     def _validar_directorio_repos(self):
