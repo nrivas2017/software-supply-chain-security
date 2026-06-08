@@ -674,7 +674,7 @@ class CodeQLAnalyzer:
             "message": message.get("text", "") if isinstance(message, dict) else str(message),
             "file": artifact.get("uri", "unknown"),
             "region": physical_location.get("region", {}),
-            "kind": resultado.get("kind", "notApplicable"),
+            "kind": resultado.get("kind", "fail"),
             "properties": resultado.get("properties", {}),
         }
 

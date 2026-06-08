@@ -59,7 +59,7 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 ### Análisis 3: ReDoS en Interfaz de Usuario de Ghost (Vector: Código Fuente)
 
 - **Conozco:** CodeQL encontró múltiples riesgos de Expresión Regular Polinómica (ReDoS) en el archivo `apps/admin-x-design-system/src/global/form/currency-field.tsx` de Ghost.
-- **Conozco:** Al ser un componente de React (tsx) ejecutado en el cliente/administrador, verificamos que un ReDoS podría congelar el navegador del administrador que ingrese valores de moneda anómalos, pero difícilmente causará una caída del servidor backend. Es un ataque de denegación de servicio del lado del cliente.
+- **Verifico:** Al ser un componente de React (tsx) ejecutado en el cliente/administrador, verificamos que un ReDoS podría congelar el navegador del administrador que ingrese valores de moneda anómalos, pero difícilmente causará una caída del servidor backend. Es un ataque de denegación de servicio del lado del cliente.
 - **Evidencio:** Archivo `Ghost-codeql.json` en la regla `js/polynomial-redos`.
 - **Decido y Actúo:**
   - *Decisión:* Riesgo medio. Afecta la usabilidad del sistema administrativo, pero no compromete los datos.
@@ -67,7 +67,7 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 
 ### Análisis 4: Inyección de Secretos en Pipeline de CI/CD (Vector 2: Pipelines)
 
-- **Conozco:** La auditoría de los flujos de GitHub Actions reveló un riesgo crítico en el repositorio `wiki` . (línea 26), se utiliza un secreto directamente dentro de un script de shell.
+- **Conozco:** La auditoría de los flujos de GitHub Actions reveló un riesgo crítico en el repositorio `wiki` (línea 26), se utiliza un secreto directamente dentro de un script de shell.
 - **Verifico:** Inyectar secretos en línea en un intérprete de bash es altamente inseguro. Si otra variable controlada por el usuario se procesa en el mismo bloque, un atacante podría alterar el comando y provocar que GitHub Actions imprima el secreto en los logs públicos, comprometiendo la infraestructura de despliegue.
 - **Evidencio:** Archivo `.github/workflows/helm.yml` en el repositorio `wiki`:
   ```
@@ -95,11 +95,48 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
   - *Decisión:* Las deficiencias en las prácticas humanas no son vulnerabilidades explotables directamente, pero son la causa raíz que permite que los Vectores 1 y 2 existan.
   - *Acción:* Establecer protección de ramas (Branch Protection Rules) en GitHub exigiendo al menos 1 revisión aprobada para `main` apoyada en la creación de un archivo `CODEOWNERS`. Incorporar un archivo `.github/dependabot.yml` base en todos los repositorios de la organización para automatizar el parcheo de dependencias.
 
+### Análisis 6: Tags mutables y permisos por defecto en Hoppscotch (Vector 2: Pipelines)
+
+- **Conozco:** La auditoría de los workflows de GitHub Actions reveló dos prácticas inseguras simultáneas en el repositorio `hoppscotch`: (1) **los 4 workflows carecen completamente del bloque `permissions:`**, lo que otorga al `GITHUB_TOKEN` los permisos por defecto de la organización (potencialmente con `write` heredado); y (2) **las 13+ Actions de terceros usan tags mutables** (`@v3`, `@v4`, `@v1`) en lugar de SHAs inmutables, incluyendo Actions no oficiales como `actions-rs/toolchain@v1` y `apple-actions/import-codesign-certs@v3`.
+- **Verifico:** Confirmamos que ambas condiciones se cumplen simultáneamente revisando los 4 archivos en `.github/workflows/` del repositorio. Verificamos que el riesgo no es teórico: un tag como `@v3` apunta a una referencia mutable que el mantenedor (o un atacante que comprometa la cuenta del mantenedor) puede reasignar a un commit malicioso en cualquier momento — un patrón documentado en incidentes reales de supply chain como tj-actions/changed-files (CVE-2025-30066). Combinado con la ausencia de `permissions:`, una Action comprometida ejecutándose en CI podría escribir en el repositorio, publicar releases falsos o exfiltrar secretos.
+- **Evidencio:**
+  - **Reporte de auditoría** (`evidence/reporte_auditoria_github.md`, hallazgos C-2 y C-3):
+    | # | Vector | Hallazgo | Evidencia |
+    |---|---|---|---|
+    | C-2 | V2.1 | Ausencia total de bloque `permissions:` en los 4 workflows | Todos los archivos en `.github/workflows/` |
+    | C-3 | V2.2 | 13+ Actions de terceros con tags mutables | `build-hoppscotch-agent.yml:59,65,73,90`, `release-push-docker.yml:22,28,31,34,41`, `tests.yml:22,28`, etc. |
+    
+  - **Muestra de líneas afectadas** (ejemplo de `build-hoppscotch-agent.yml`):
+    ```yaml
+    - uses: actions/checkout@v3            # línea 59 — mutable
+    - uses: actions/setup-node@v3          # línea 65 — mutable
+    - uses: actions-rs/toolchain@v1        # línea 73 — mutable + 3rd party
+    - uses: apple-actions/import-codesign-certs@v3  # línea 90 — mutable + 3rd party
+    ```
+- **Decido y Acto:**
+  - *Decisión:* Riesgo **crítico de cadena de suministro**. A diferencia de una vulnerabilidad en una dependencia de producción (que requiere que un atacante logre llegar al endpoint vulnerable), una Action comprometida ejecuta código **directamente dentro del pipeline de build**, con acceso a secretos y permisos de escritura en el repositorio. El impacto es equivalente al hallazgo C-1 de wiki, pero con mayor superficie (4 workflows vs 1).
+  - *Acción:*
+    1. **Anclar todas las Actions a su Commit SHA exacto** usando una herramienta como [`pin-github-action`](https://github.com/mheap/pin-github-action) o el ecosistema `github-actions` de Dependabot:
+    ```yaml
+    # Antes
+    - uses: actions/checkout@v3
+    # Después
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+    ```
+    2. **Declarar `permissions:` explícitos por workflow**, partiendo del principio de mínimo privilegio:
+    ```yaml
+    permissions:
+      contents: read   # solo lectura por defecto
+    ```
+    Y otorgar permisos adicionales (`packages: write`, `id-token: write`, etc.) únicamente en los jobs que los requieran.
+    3. **Habilitar `Dependabot` para `github-actions`** (`.github/dependabot.yml`) para que las actualizaciones de SHA lleguen como PRs revisables, evitando que el pinning se convierta en deuda técnica.
+
+
 ## 5. Priorización de vulnerabilidades
 
 Para gestionar eficientemente los hallazgos, se propone la siguiente priorización basada en severidad, exposición y facilidad de explotación:
 
-1. **Prioridad 1 (Crítica) - Fugas en CI/CD (Vector 2):** Se debe resolver inmediatamente la inyección de secretos en `helm.yml` (wiki) y el uso de "tags mutables" en `hoppscotch` y `snipe-it`. Un pipeline comprometido permite envenenar futuras entregas de software (Supply Chain Attack) independientemente de qué tan seguro sea el código fuente.
+1. **Prioridad 1 (Crítica) - Riesgos en CI/CD (Vector 2):** Se debe resolver inmediatamente (a) la inyección de secretos en `helm.yml` del repositorio `wiki` (Análisis 4) y (b) la combinación de permisos por defecto + tags mutables en `hoppscotch` y `snipe-it` (Análisis 6). Un pipeline comprometido permite envenenar futuras entregas de software (Supply Chain Attack) independientemente de qué tan seguro sea el código fuente.
 2. **Prioridad 2 (Alta) - Vulnerabilidades SAST con acceso externo (Vector 1):** Inyecciones de rutas (Path Injection en Ghost) o Inyecciones SQL (Knex), ya que pueden ser explotadas por usuarios maliciosos desde el exterior sin requerir autenticación privilegiada.
 3. **Prioridad 3 (Media) - Dependencias de producción y prácticas Humanas:** Parchear componentes vulnerables del lado del servidor y habilitar reglas de revisión humana (`CODEOWNERS`).
 4. **Prioridad 4 (Baja) - Denegación de servicio en cliente y devDependencies:** Problemas como ReDoS en interfaces de administración interna (Ghost) o SSRF en dependencias de testing (Superset), debido a que su impacto está altamente encapsulado.

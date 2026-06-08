@@ -376,8 +376,8 @@ class GrypeAnalyzer:
         metadata = vuln.get("metadata", {})
 
         # Determinar severidad (Grype usa CVSS score)
-        cvss_score = metadata.get("cvss", [{}])[0].get(
-            "score", 0) if metadata.get("cvss") else 0
+        cvss_list = vuln.get("vulnerability", {}).get("cvss", [])
+        cvss_score = cvss_list[0].get("metrics", {}).get("baseScore", 0) if cvss_list else 0
         severity = self._determinar_severidad_por_cvss(cvss_score)
 
         return {
