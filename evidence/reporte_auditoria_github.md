@@ -110,11 +110,13 @@
 
 **V2.4 Secretos en `run:`:** ✅ Sin hallazgos.
 
+**V2.5 Ejecución ciega de binarios externos:** ❌ **CRÍTICO — Supply chain risk.** El archivo `build-hoppscotch-agent.yml` (líneas 58-64 y 222-228) descarga herramientas binarias precompiladas de repositorios de terceros mediante `curl` y las ejecuta sin validar su integridad. Esto **contradice drásticamente su propio archivo `SECURITY.md`**, el cual hace un fuerte énfasis en la verificación estricta de firmas y hashes (BLAKE3) para proteger a los usuarios. Si un atacante compromete el release de origen, el pipeline ejecutaría malware con acceso a todos los secretos criptográficos de Apple y Azure del repositorio.
+
 #### Vector 3 — Prácticas
 
 | Check | Estado | Evidencia |
 |---|---|---|
-| SECURITY.md | ✅ | `SECURITY.md` en raíz |
+| SECURITY.md | ✅ | `SECURITY.md` en raíz con modelo de amenazas exhaustivo y política de reporte. |
 | Dependabot/Renovate | ✅ | `.github/dependabot.yml` |
 | CODEOWNERS | ❌ | No existe archivo CODEOWNERS |
 
@@ -361,11 +363,12 @@
 |---|---|---|---|---|
 | C-1 | wiki | V2.4 | Secreto `HELM_REPO_PASSWORD` interpolado directamente en comando shell — visible en logs | `.github/workflows/helm.yml:26` |
 | C-2 | hoppscotch | V2.1 | Ausencia total de bloque `permissions:` en los 4 workflows — permisos excesivos por defecto | Todos los archivos en `.github/workflows/` |
-| C-3 | hoppscotch | V2.2 | 13+ Actions de terceros con tags mutables — riesgo de supply chain attack | `build-hoppscotch-agent.yml:59,65,73,90`, `release-push-docker.yml:28,31,34,41`, etc. |
-| C-4 | snipe-it | V2.1 | Ausencia de `permissions:` en 5 de 7 workflows | `crowdin-upload.yml`, `stale.yml`, `tests-mysql.yml`, `tests-postgres.yml`, `tests-sqlite.yml` |
-| C-5 | snipe-it | V2.2 | 24+ Actions de terceros con tags mutables | `docker-alpine.yml:45,49,55,67,76`, `SA-codeql.yml:29,33,37,39`, etc. |
-| C-6 | librenms | V2.2 | 12+ Actions de terceros con tags mutables en todos los workflows | `doc.yml:34,54,60`, `lint.yml:25,36,54,68`, `test.yml:65,68,80`, etc. |
-| C-7 | wiki | V2.2 | 17+ Actions de terceros con tags mutables incluyendo Actions no-oficiales (`appleboy`, `sebastianpopp`, `Requarks`) | `build.yml:22,45,58,340,347,369,380`, etc. |
+| C-3 | hoppscotch | V2.2 | 13+ Actions de terceros con tags mutables — riesgo de supply chain attack | `build-hoppscotch-agent.yml:59`, `release-push-docker.yml:28`, etc. |
+| C-4 | hoppscotch | V2.5 | Ejecución ciega de binarios de terceros (`curl` + `tar`) sin validación de hash, contradiciendo su propio `SECURITY.md` | `build-hoppscotch-agent.yml:58-64, 222-228` |
+| C-5 | snipe-it | V2.1 | Ausencia de `permissions:` en 5 de 7 workflows | `crowdin-upload.yml`, `tests-mysql.yml`, etc. |
+| C-6 | snipe-it | V2.2 | 24+ Actions de terceros con tags mutables | `docker-alpine.yml:45`, `SA-codeql.yml:29`, etc. |
+| C-7 | librenms | V2.2 | 12+ Actions de terceros con tags mutables en todos los workflows | `doc.yml:34`, `lint.yml:25`, `test.yml:65`, etc. |
+| C-8 | wiki | V2.2 | 17+ Actions de terceros con tags mutables incluyendo Actions no-oficiales (`appleboy`, `sebastianpopp`, `Requarks`) | `build.yml:22,45,58,340,347`, etc. |
 
 ### 🟠 Alto — Corregir en próximo sprint
 
@@ -424,3 +427,19 @@ Y otorgar solo los permisos adicionales que cada job requiera explícitamente.
 
 ### Para A-1 (superset `showtime-trigger.yml`) — pull_request_target + checkout
 Revisar si el checkout del código PR es estrictamente necesario. Si lo es, agregar `permissions: contents: read` mínimo y considerar usar `workflow_run` como trigger alternativo que aísla mejor los contextos de confianza.
+
+### Para C-4 (hoppscotch `build-hoppscotch-agent.yml`) — Validación de binarios externos
+Nunca se debe descargar y ejecutar software de terceros en un entorno de CI/CD sin verificar matemáticamente su procedencia, tal como lo dictan las buenas prácticas de Zero Trust.
+```bash
+# VULNERABLE (práctica actual):
+curl -LO "[https://github.com/tauri-apps/.../cargo-tauri-x86_64.zip](https://github.com/tauri-apps/.../cargo-tauri-x86_64.zip)"
+unzip cargo-tauri-x86_64.zip
+chmod +x cargo-tauri
+
+# CORRECTO (remediación propuesta):
+curl -LO "[https://github.com/tauri-apps/.../cargo-tauri-x86_64.zip](https://github.com/tauri-apps/.../cargo-tauri-x86_64.zip)"
+# Verificar el hash SHA256 esperado (hardcodeado de forma inmutable en el workflow)
+echo "<HASH-SHA256-ESPERADO> cargo-tauri-x86_64.zip" | sha256sum --check
+unzip cargo-tauri-x86_64.zip
+chmod +x cargo-tauri
+```
