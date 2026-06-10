@@ -2,7 +2,7 @@
 
 ## 1. Contexto del análisis
 
-En el presente trabajo se evaluó la seguridad de la cadena de suministro de software de una selección de 9 repositorios Open Source: **Ghost, Apache Superset, Gitea, Hoppscotch, LibreNMS, Mastodon, Snipe-IT, Wiki.js y ZoneMinder**.
+En el presente trabajo se evaluó la seguridad de la cadena de suministro de software de una selección de 9 repositorios Open Source: **Ghost, Apache Superset, Gitea, Hoppscotch, LibreNMS, Mastodon, Snipe-IT, Wiki.js y ZoneMinder**. Estos repositorios fueron seleccionados por la variedad de tecnologías (Go/Node/PHP/Ruby/Python/C++).
 
 El proceso de auditoría cubrió múltiples dimensiones del ciclo de vida del desarrollo:
 - Generación de SBOMs (Software Bill of Materials) mediante Syft.
@@ -34,7 +34,7 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 
 - **Conozco:** La auditoría manual de los flujos de GitHub Actions reveló un riesgo crítico en el repositorio `wiki` (hallazgo C-1). Se utiliza un secreto (`HELM_REPO_PASSWORD`) directamente dentro de un script de shell en el pipeline de despliegue.
 - **Verifico:** Inyectar secretos directamente en línea dentro de un comando `run:` es altamente inseguro. Si el comando falla o si el entorno es manipulado, GitHub Actions podría imprimir el secreto en los logs públicos, comprometiendo los accesos al registro de Helm.
-- **Evidencio:** El archivo `.github/workflows/helm.yml` (línea 26) contiene el comando: `--password="${{secrets.HELM_REPO_PASSWORD}}"`.
+- **Evidencio:** El archivo `.github/workflows/helm.yml` (línea 26) contiene el comando: `--password="${{secrets.HELM_REPO_PASSWORD}}"`. Screenshot en `/evidence/capturas/helm_wiki.png`
 - **Decido y Actúo:**
   - *Decisión:* La exposición potencial de credenciales de infraestructura representa un riesgo crítico de cadena de suministro y debe subsanarse inmediatamente.
   - *Acción:* Modificar el workflow para que el secreto se asigne a una variable de entorno segura en el bloque `env:`, invocando la variable dentro del script de bash sin interpolación directa.
@@ -62,31 +62,31 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 ### Análisis 4: Escape de Sandbox en Apache Superset (Vector 1: Dependencias)
 - **Conozco:** Múltiples vulnerabilidades críticas en la librería `vm2` (ej. `GHSA-m4wx-m65x-ghrr`).
 - **Verifico:** `vm2` es el motor de aislamiento de Superset para código JavaScript. Los CVEs reportados indican un escape de sandbox que permite a un usuario no privilegiado ejecutar código arbitrario en el sistema host.
-- **Evidencio:** El reporte `resumen_vulnerabilidades.csv` lista 6 instancias críticas de `vm2`.
+- **Evidencio:** El reporte `resumen_vulnerabilidades.csv` lista 5 instancias críticas de `vm2` (más 3 High, 1 Medium y 1 Low, todas en vm2 @ 3.11.3).
 - **Decido y Actúo:** 
   - *Acción:* Dado que `vm2` es una dependencia central de seguridad, la remediación no puede ser solo un `npm update`. Se requiere una evaluación de arquitectura para migrar a un entorno de ejecución más seguro (como Worker Threads con restricciones de sistema operativo o entornos Isolate más robustos) si la librería sigue presentando fallos de diseño fundamentales.
 
 ### Análisis 5: Inyección SQL en Gitea (Vector 1: Código Fuente)
 
 - **Conozco:** CodeQL reportó una vulnerabilidad de inyección SQL en el código fuente del repositorio Gitea. El archivo afectado es `models/issues/milestone_list.go` .
-- **Verifico:** Se revisa el reporte SAST y el código fuente. Aunque la herramienta lo clasifica genéricamente como inyección SQL, se verifica que el ORM protege contra inyecciones clásicas (SQLi) mediante sentencias preparadas. No obstante, se confirma que el framework pasa la entrada del usuario a una cláusula `LIKE` sin escapar, y se detecta una omisión en la cadena de métodos del ORM que ignora la validación de permisos del repositorio.
-- **Evidencio:** El archivo `resumen_vulnerabilidades.csv` detalla la regla `go/sql-injection` clasificada con severidad "Medium". Requiere parche o revisión manual .
+- **Verifico:** Se revisa el reporte SAST y el código fuente. Aunque la herramienta lo clasifica genéricamente como inyección SQL, se verifica que el ORM protege contra inyecciones clásicas (SQLi) mediante sentencias preparadas. No obstante, se confirma que el framework pasa la entrada del usuario a una cláusula `LIKE` sin escapar, y se detecta una omisión en la cadena de métodos del ORM que ignora la validación de permisos del repositorio. CodeQL detectó 2 hits de `go/sql-injection` en `milestone_list.go`.
+- **Evidencio:** El archivo `resumen_vulnerabilidades.csv` detalla la regla `go/sql-injection` clasificada con severidad "Medium". Requiere parche o revisión manual. Captura de pantalla: `evidence/capturas/inyeccion_sql_gitea.png`.
 - **Decido y Actúo:**
   - *Decisión:* Aunque el ORM previene inyecciones SQL tradicionales (SQLi) mediante el uso de sentencias preparadas, la entrada del usuario se pasa directamente a una cláusula `LIKE` sin sanitizar los caracteres comodín (`%`,`_`). Esto representa un riesgo de Inyección de Comodines que podría derivar en una Denegación de Servicio (DoS) por agotamiento de recursos en la base de datos.
   - *Acción:* Refactorizar la función en `milestone_list.go` (específicamente donde se usa `builder.Like`) para implementar una función de limpieza que escape explícitamente los caracteres comodín de SQL en la variable `keyword` antes de que el ORM construya la consulta. Adicionalmente, revisar la lógica de construcción de `sess` para resolver la pérdida de condiciones de acceso (posible IDOR).
 
 ### Análisis 6: Falta de Gobernanza como Causa Raíz en Wiki.js (Vector 3)
 
-- **Conozco:** Wiki.js es el único repositorio del corpus que combina las tres carencias de gobernanza simultáneamente: sin Dependabot/Renovate, sin CODEOWNERS, y workflows sin bloque `permissions:`. En paralelo, es también el repositorio con mayor concentración de vulnerabilidades críticas SCA del estudio (17+ CVEs Critical).
+- **Conozco:** Wiki.js es el único repositorio del corpus que combina las tres carencias de gobernanza simultáneamente: sin Dependabot/Renovate, sin CODEOWNERS, y workflows sin bloque `permissions:`. En paralelo, es también el repositorio con mayor concentración de vulnerabilidades críticas SCA del estudio (20+ CVEs Critical).
 - **Verifico:** Se cruza la matriz V3 del reporte_auditoria_github.md (fila `wiki`) con el conteo de severidades Critical/High del resumen_vulnerabilidades.csv filtrado por `Repositorio = wiki`. La correlación es directa: la ausencia de automatización de parches (V3.2) explica por qué versiones como `underscore@1.6.0`, `minimist@0.0.8` o `xmldom@0.1.27` —deprecadas hace años— siguen vigentes en el árbol de dependencias.
 - **Evidencio:** 
   | Repo   | SECURITY.md | Dependabot | CODEOWNERS | CVEs Críticos SCA |
   |--------|:-----------:|:----------:|:----------:|:-----------------:|
-  | wiki   | ✅          | ❌         | ❌         | 17+               |
+  | wiki   | ✅          | ❌         | ❌         | 20+               |
   | Ghost  | ✅          | ✅         | ✅         | 1                 |
 - **Decido y Actúo:** Wiki.js evidencia que la deuda técnica de seguridad no se origina 
   en los desarrolladores, sino en la AUSENCIA de mecanismos automáticos.
-  - *Acciónes:*
+  - *Acciones:*
     - introducir `.github/dependabot.yml` con todos los ecosistemas (npm, github-actions).
     - establecer `CODEOWNERS` para módulos críticos como autenticación SAML (`server/modules/authentication`) y persistencia (`server/db`).
     - habilitar Branch Protection Rules que exijan revisión.
@@ -111,13 +111,16 @@ Para maximizar la resiliencia del software analizado minimizando el esfuerzo ini
 Toda la propuesta está debidamente respaldada por los artefactos recopilados, ubicados en los directorios del repositorio de la siguiente forma:
 
 - `results/`: Contiene los archivos crudos generados en formato JSON y SARIF resultantes del paso de Syft, Grype y CodeQL por cada repositorio.
+- `evidence/capturas/distribucion_severidad.png`: Gráfico generador a partir del archivo `evidence/reportes/resumen_vulnerabilidades.csv` que muestra la distribución de vulnerabilidades según su severidad.
+- `evidence/capturas/helm_wiki.png`: Captura de pantalla del archivo `.github/workflows/helm.yml` que muestra el uso de un secreto directamente dentro de un script de shell en el pipeline de despliegue.
+- `evidence/capturas/inyeccion_sql_gitea.png`: Captura de pantalla del archivo `gitea/models/issues/milestone_list.go` que muestra la lógica de construcción de la consulta SQL con parámetros dinámicos.
 - `evidence/reportes/resumen_vulnerabilidades.csv`: Agregado final de vulnerabilidades (SCA y SAST) identificadas a lo largo del proceso.
 - `evidence/reporte_auditoria_github.md`: Documento elaborado para constatar las debilidades en los archivos de control (.github) y workflows de CI/CD.
 - `scripts/`: Scripts en Python empleados para la extracción automatizada y orquestación de datos.
 
 ## 8. Conclusiones
 
-Proteger la cadena de suministro de software requiere un enfoque tridimensional. Como demostró este análisis práctico, detectar vulnerabilidades en el código fuente o en dependencias (Vector 1) pierde efectividad si los atacantes pueden saltarse estos controles envenenando directamente la tubería de despliegue automatizado (Vector 2) debido a configuraciones de permisos negligentes. Al aplicar de forma cíclica el método **Conozco, Verifico, Evidencio, Decido y Actúo**, logramos trascender del simple escaneo técnico hacia un modelo de gestión y gobernanza activa que prioriza riesgos reales (Vector 3), blindando la organización de manera eficiente. Es destacable que los 9 repositorios cuentan con `SECURITY.md`, lo que refleja madurez en la comunicación de seguridad, pero contrasta con la pobre implementación operativa de `Dependabot` (4/9), `CODEOWNERS` (3/9) y pinning de Actions (3/9). La cultura existe; falta la automatización.
+Proteger la cadena de suministro de software requiere un enfoque tridimensional. Como demostró este análisis práctico, detectar vulnerabilidades en el código fuente o en dependencias (Vector 1) pierde efectividad si los atacantes pueden saltarse estos controles envenenando directamente la tubería de despliegue automatizado (Vector 2) debido a configuraciones de permisos negligentes. Al aplicar de forma cíclica el método **Conozco, Verifico, Evidencio, Decido y Actúo**, logramos trascender del simple escaneo técnico hacia un modelo de gestión y gobernanza activa que prioriza riesgos reales (Vector 3), blindando la organización de manera eficiente. Es destacable que los 9 repositorios cuentan con `SECURITY.md`, lo que refleja madurez en la comunicación de seguridad, pero contrasta con la pobre implementación operativa de `Dependabot` (5/9, aunque existe parcialmente en snipe-it y zoneminder), `CODEOWNERS` (3/9) y pinning de Actions (4/9). La cultura existe; falta la automatización.
 
 ## 9. Reconocimientos y Licencia
 
