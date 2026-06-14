@@ -16,7 +16,11 @@ Dada la alta volumetría de datos generada, el objetivo de este documento es pro
 
 ![Distribución de vulnerabilidades según su severidad](evidence/capturas/distribucion_severidad.png)
 
-En total se identificaron 2740 vulnerabilidades, distribuidas en 29 críticas, 316 altas, 2303 medias y 92 bajas. La concentración de hallazgos críticos se ubica principalmente en el repositorio wiki (20) con afectaciones en múltiples dependencias, seguido por apache-superset (5) debido a la presencia repetida de la librería vm2, hoppscotch (2), y de manera aislada en Ghost (1) y snipe-it (1).
+En total se identificaron 2740 vulnerabilidades, distribuidas en 29 críticas, 316 altas, 2303 medias y 92 bajas. 
+
+![Concentración de vulnerabilidades críticas por repositorio](evidence/capturas/concentracion_criticas_repo.png)
+
+La concentración de hallazgos críticos se ubica principalmente en el repositorio wiki (20) con afectaciones en múltiples dependencias, seguido por apache-superset (5) debido a la presencia repetida de la librería vm2, hoppscotch (2), y de manera aislada en snipe-it (1) y Ghost (1).
 
 ## 3. Clasificación según vector de ataque
 
