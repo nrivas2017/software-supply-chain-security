@@ -5,6 +5,7 @@
 En el presente trabajo se evaluó la seguridad de la cadena de suministro de software de una selección de 9 repositorios Open Source: **Ghost, Apache Superset, Gitea, Hoppscotch, LibreNMS, Mastodon, Snipe-IT, Wiki.js y ZoneMinder**. Estos repositorios fueron seleccionados por la variedad de tecnologías (Go/Node/PHP/Ruby/Python/C++).
 
 El proceso de auditoría cubrió múltiples dimensiones del ciclo de vida del desarrollo:
+
 - Generación de SBOMs (Software Bill of Materials) mediante Syft.
 - Análisis de vulnerabilidades en dependencias (SCA) con Grype.
 - Escaneo estático de código fuente (SAST) con CodeQL.
@@ -16,7 +17,7 @@ Dada la alta volumetría de datos generada, el objetivo de este documento es pro
 
 ![Distribución de vulnerabilidades según su severidad](evidence/capturas/distribucion_severidad.png)
 
-En total se identificaron 2740 vulnerabilidades, distribuidas en 29 críticas, 316 altas, 2303 medias y 92 bajas. 
+En total se identificaron 2740 vulnerabilidades, distribuidas en 29 críticas, 316 altas, 2303 medias y 92 bajas.
 
 ![Concentración de vulnerabilidades críticas por repositorio](evidence/capturas/concentracion_criticas_repo.png)
 
@@ -40,19 +41,19 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 - **Verifico:** Inyectar secretos directamente en línea dentro de un comando `run:` es altamente inseguro. Si el comando falla o si el entorno es manipulado, GitHub Actions podría imprimir el secreto en los logs públicos, comprometiendo los accesos al registro de Helm.
 - **Evidencio:** El archivo `.github/workflows/helm.yml` (línea 26) contiene el comando: `--password="${{secrets.HELM_REPO_PASSWORD}}"`. Screenshot en `/evidence/capturas/helm_wiki.png`
 - **Decido y Actúo:**
-  - *Decisión:* La exposición potencial de credenciales de infraestructura representa un riesgo crítico de cadena de suministro y debe subsanarse inmediatamente.
-  - *Acción:* Modificar el workflow para que el secreto se asigne a una variable de entorno segura en el bloque `env:`, invocando la variable dentro del script de bash sin interpolación directa.
+  - _Decisión:_ La exposición potencial de credenciales de infraestructura representa un riesgo crítico de cadena de suministro y debe subsanarse inmediatamente.
+  - _Acción:_ Modificar el workflow para que el secreto se asigne a una variable de entorno segura en el bloque `env:`, invocando la variable dentro del script de bash sin interpolación directa.
 
 ### Análisis 2: Ejecución Ciega de Binarios y Permisos Excesivos en Hoppscotch (Vector 2: Pipelines)
 
 - **Conozco:** La auditoría manual de los flujos de GitHub Actions en `hoppscotch` (archivo `build-hoppscotch-agent.yml`) reveló vulnerabilidades críticas de envenenamiento de cadena de suministro. Existe ausencia total del bloque global de permisos y se realiza la descarga de dependencias binarias externas sin validación de integridad.
-- **Verifico:** Por un lado, las acciones de terceros utilizan tags mutables (`@v1` o `@v3`), asumiendo permisos amplios por defecto. Por otro lado, en múltiples *steps* de preparación (ej. instalación de `cargo-tauri` o `trunk`), el pipeline utiliza comandos `curl` para descargar archivos comprimidos de repositorios de terceros, los cuales son desempaquetados y ejecutados (`chmod +x`) sin verificar previamente su checksum (SHA256). Si el release de origen es alterado por un atacante, el pipeline ejecutaría código malicioso, exponiendo todos los secretos de firma criptográfica (Apple y Azure) inyectados en el entorno.
+- **Verifico:** Por un lado, las acciones de terceros utilizan tags mutables (`@v1` o `@v3`), asumiendo permisos amplios por defecto. Por otro lado, en múltiples _steps_ de preparación (ej. instalación de `cargo-tauri` o `trunk`), el pipeline utiliza comandos `curl` para descargar archivos comprimidos de repositorios de terceros, los cuales son desempaquetados y ejecutados (`chmod +x`) sin verificar previamente su checksum (SHA256). Si el release de origen es alterado por un atacante, el pipeline ejecutaría código malicioso, exponiendo todos los secretos de firma criptográfica (Apple y Azure) inyectados en el entorno.
 - **Evidencio:** Archivo `.github/workflows/build-hoppscotch-agent.yml` (líneas 58-64 y 222-228), donde se descarga y ejecuta código de `github.com/tauri-apps` sin comandos de verificación de hash previos. Adicionalmente, el workflow carece del bloque `permissions:`.
 - **Decido y Actúo:**
-  - *Decisión:* La inyección de código de terceros no validado durante el proceso de *build* compromete absolutamente la integridad de los artefactos generados. Es un riesgo inaceptable.
-  - *Acción: 1* Modificar los scripts de bash para que, tras el comando `curl`, se exija la validación del hash del archivo descargado (ej. mediante `sha256sum -c`) contra un hash duro almacenado de forma segura en el repositorio.
-  - *Acción: 2* Declarar `permissions: contents: read` a nivel global en el YAML.
-  - *Acción: 3* Fijar las GitHub Actions a hashes SHA inmutables (`@<SHA-completo>`). Para mitigar el impacto en el mantenimiento y evitar que el pipeline quede obsoleto (deuda técnica), se debe integrar esta medida obligatoriamente con una herramienta de gestión de dependencias como Dependabot o Renovate, la cual automatice la actualización de dichos hashes.
+  - _Decisión:_ La inyección de código de terceros no validado durante el proceso de _build_ compromete absolutamente la integridad de los artefactos generados. Es un riesgo inaceptable.
+  - _Acción: 1_ Modificar los scripts de bash para que, tras el comando `curl`, se exija la validación del hash del archivo descargado (ej. mediante `sha256sum -c`) contra un hash duro almacenado de forma segura en el repositorio.
+  - _Acción: 2_ Declarar `permissions: contents: read` a nivel global en el YAML.
+  - _Acción: 3_ Fijar las GitHub Actions a hashes SHA inmutables (`@<SHA-completo>`). Para mitigar el impacto en el mantenimiento y evitar que el pipeline quede obsoleto (deuda técnica), se debe integrar esta medida obligatoriamente con una herramienta de gestión de dependencias como Dependabot o Renovate, la cual automatice la actualización de dichos hashes.
 
 ### Análisis 3: Ejecución de Código Arbitrario en Wiki.js (Vector 1: Dependencias)
 
@@ -60,15 +61,17 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 - **Verifico:** El fallo afecta a las versiones `1.6.0`, `1.8.3` y `1.9.1` de la librería `underscore`. Un atacante podría aprovechar este vector si el software expone funciones de evaluación u objetos sin control a entradas externas.
 - **Evidencio:** El reporte SCA vincula estas versiones al identificador `GHSA-cf4h-3jhx-xvhq` con una severidad "Critical".
 - **Decido y Actúo:**
-  - *Decisión:* Las vulnerabilidades en componentes críticos que permiten la escritura de archivos fuera del directorio de destino (`tar`) y la ejecución de código arbitrario (`underscore`) representan un riesgo de compromiso total del servidor.
-  - *Acción:* Además de actualizar `underscore`, es imperativo auditar las funciones de extracción de archivos en Wiki.js para implementar restricciones de rutas (path sanitization), bloqueando explícitamente ataques de Zip Slip o Hardlink Traversal.
+  - _Decisión:_ Las vulnerabilidades en componentes críticos que permiten la escritura de archivos fuera del directorio de destino (`tar`) y la ejecución de código arbitrario (`underscore`) representan un riesgo de compromiso total del servidor.
+  - _Acción:_ Además de actualizar `underscore`, es imperativo auditar las funciones de extracción de archivos en Wiki.js para implementar restricciones de rutas (path sanitization), bloqueando explícitamente ataques de Zip Slip o Hardlink Traversal.
 
 ### Análisis 4: Escape de Sandbox en Apache Superset (Vector 1: Dependencias)
+
 - **Conozco:** Múltiples vulnerabilidades críticas en la librería `vm2` (ej. `GHSA-m4wx-m65x-ghrr`).
 - **Verifico:** `vm2` es el motor de aislamiento de Superset para código JavaScript. Los CVEs reportados indican un escape de sandbox que permite a un usuario no privilegiado ejecutar código arbitrario en el sistema host.
 - **Evidencio:** El reporte `resumen_vulnerabilidades.csv` lista 5 instancias críticas de `vm2` (más 3 High, 1 Medium y 1 Low, todas en vm2 @ 3.11.3).
-- **Decido y Actúo:** 
-  - *Acción:* Dado que `vm2` es una dependencia central de seguridad, la remediación no puede ser solo un `npm update`. Se requiere una evaluación de arquitectura para migrar a un entorno de ejecución más seguro (como Worker Threads con restricciones de sistema operativo o entornos Isolate más robustos) si la librería sigue presentando fallos de diseño fundamentales.
+- **Decido y Actúo:**
+  - _Decisión:_ Dado que `vm2` actúa como límite de seguridad crítico entre el código del usuario y el sistema host, sus fallos reiterados de diseño indican que la librería no puede considerarse una barrera confiable. El riesgo de compromiso total del servidor es inaceptable y la remediación no puede limitarse a un simple `npm update`.
+  - _Acción:_ Se requiere una evaluación de arquitectura para migrar a un entorno de ejecución más seguro (como Worker Threads con restricciones de sistema operativo o entornos Isolate más robustos) si la librería sigue presentando fallos de diseño fundamentales.
 
 ### Análisis 5: Inyección SQL en Gitea (Vector 1: Código Fuente)
 
@@ -76,33 +79,34 @@ A continuación, se desarrolla el ciclo de gestión para una muestra representat
 - **Verifico:** Se revisa el reporte SAST y el código fuente. Aunque la herramienta lo clasifica genéricamente como inyección SQL, se verifica que el ORM protege contra inyecciones clásicas (SQLi) mediante sentencias preparadas. No obstante, se confirma que el framework pasa la entrada del usuario a una cláusula `LIKE` sin escapar, y se detecta una omisión en la cadena de métodos del ORM que ignora la validación de permisos del repositorio. CodeQL detectó 2 hits de `go/sql-injection` en `milestone_list.go`.
 - **Evidencio:** El archivo `resumen_vulnerabilidades.csv` detalla la regla `go/sql-injection` clasificada con severidad "Medium". Requiere parche o revisión manual. Captura de pantalla: `evidence/capturas/inyeccion_sql_gitea.png`.
 - **Decido y Actúo:**
-  - *Decisión:* Aunque el ORM previene inyecciones SQL tradicionales (SQLi) mediante el uso de sentencias preparadas, la entrada del usuario se pasa directamente a una cláusula `LIKE` sin sanitizar los caracteres comodín (`%`,`_`). Esto representa un riesgo de Inyección de Comodines que podría derivar en una Denegación de Servicio (DoS) por agotamiento de recursos en la base de datos.
-  - *Acción:* Refactorizar la función en `milestone_list.go` (específicamente donde se usa `builder.Like`) para implementar una función de limpieza que escape explícitamente los caracteres comodín de SQL en la variable `keyword` antes de que el ORM construya la consulta. Adicionalmente, revisar la lógica de construcción de `sess` para resolver la pérdida de condiciones de acceso (posible IDOR).
+  - _Decisión:_ Aunque el ORM previene inyecciones SQL tradicionales (SQLi) mediante el uso de sentencias preparadas, la entrada del usuario se pasa directamente a una cláusula `LIKE` sin sanitizar los caracteres comodín (`%`,`_`). Esto representa un riesgo de Inyección de Comodines que podría derivar en una Denegación de Servicio (DoS) por agotamiento de recursos en la base de datos.
+  - _Acción:_ Refactorizar la función en `milestone_list.go` (específicamente donde se usa `builder.Like`) para implementar una función de limpieza que escape explícitamente los caracteres comodín de SQL en la variable `keyword` antes de que el ORM construya la consulta. Adicionalmente, revisar la lógica de construcción de `sess` para resolver la pérdida de condiciones de acceso (posible IDOR).
 
 ### Análisis 6: Falta de Gobernanza como Causa Raíz en Wiki.js (Vector 3)
 
 - **Conozco:** Wiki.js es el único repositorio del corpus que combina las tres carencias de gobernanza simultáneamente: sin Dependabot/Renovate, sin CODEOWNERS, y workflows sin bloque `permissions:`. En paralelo, es también el repositorio con mayor concentración de vulnerabilidades críticas SCA del estudio (20+ CVEs Critical).
 - **Verifico:** Se cruza la matriz V3 del reporte_auditoria_github.md (fila `wiki`) con el conteo de severidades Critical/High del resumen_vulnerabilidades.csv filtrado por `Repositorio = wiki`. La correlación es directa: la ausencia de automatización de parches (V3.2) explica por qué versiones como `underscore@1.6.0`, `minimist@0.0.8` o `xmldom@0.1.27` —deprecadas hace años— siguen vigentes en el árbol de dependencias.
-- **Evidencio:** 
-  | Repo   | SECURITY.md | Dependabot | CODEOWNERS | CVEs Críticos SCA |
+- **Evidencio:**
+  | Repo | SECURITY.md | Dependabot | CODEOWNERS | CVEs Críticos SCA |
   |--------|:-----------:|:----------:|:----------:|:-----------------:|
-  | wiki   | ✅          | ❌         | ❌         | 20+               |
-  | Ghost  | ✅          | ✅         | ✅         | 1                 |
-- **Decido y Actúo:** Wiki.js evidencia que la deuda técnica de seguridad no se origina 
+  | wiki | ✅ | ❌ | ❌ | 20+ |
+  | Ghost | ✅ | ✅ | ✅ | 1 |
+- **Decido y Actúo:** Wiki.js evidencia que la deuda técnica de seguridad no se origina
   en los desarrolladores, sino en la AUSENCIA de mecanismos automáticos.
-  - *Acciones:*
+  - _Acciones:_
     - introducir `.github/dependabot.yml` con todos los ecosistemas (npm, github-actions).
     - establecer `CODEOWNERS` para módulos críticos como autenticación SAML (`server/modules/authentication`) y persistencia (`server/db`).
     - habilitar Branch Protection Rules que exijan revisión.
 
 ## 5. Priorización de vulnerabilidades
 
-Para maximizar la resiliencia del software analizado minimizando el esfuerzo inicial, el equipo debe seguir el siguiente orden de remediación:
+La priorización se construye evaluando cinco criterios para cada hallazgo: **severidad** (CVSS/clasificación de la herramienta), **exposición** (si el componente afectado es accesible externamente), **facilidad de explotación** (si existe exploit público o el ataque es trivial), **impacto** (alcance del daño potencial: RCE, exfiltración, DoS) y **evidencia disponible** (nivel de confirmación empírica del hallazgo). El resultado es el siguiente orden de remediación:
 
-1. **Prioridad 1 (Crítica) - Integridad de la cadena de suministro (Vector 2):** Resolver la exposición de secretos en `wiki`, bloquear los permisos globales en los workflows defectuosos, y asegurar la inmutabilidad de las dependencias externas (mediante SHA pinning en Actions y validación de checksums en descargas de binarios en `hoppscotch`).
-2. **Prioridad 2 (Alta) - Ejecución de código externa (Vector 1):** Actualizar componentes críticos reportados por SCA (como `underscore` y `vm2`), y mitigar las inyecciones directas en código (SAST) que permitan exfiltrar datos de bases de datos.
-3. **Prioridad 3 (Media) - Postura de gobernanza (Vector 3):** Implementar Dependabot y reglas de revisión de código (`CODEOWNERS`) de manera transversal en la organización, evitando que la deuda técnica crezca a futuro.
-4. **Prioridad 4 (Baja) - Fallos aislados (Vector 1):** Atender vulnerabilidades tipo ReDoS que sólo resultan en caídas de servicio a nivel cliente, o vulnerabilidades presentes únicamente en herramientas limitadas a pruebas (devDependencies).
+1. **Prioridad 1 (Crítica) — Integridad de la cadena de suministro (Vector 2):** La exposición de secretos en `wiki` (C-1) y la ejecución ciega de binarios externos en `hoppscotch` (C-4) combinan severidad crítica con facilidad de explotación alta (un atacante que comprometa el origen del artefacto o el runner tiene acceso inmediato a todos los secretos de firma criptográfica). La evidencia es directa: líneas específicas en workflows auditados. Impacto: compromiso total del pipeline y de los artefactos publicados.
+2. **Prioridad 2 (Alta) — Ejecución de código arbitraria (Vector 1):** Vulnerabilidades SCA que permiten RCE o escape de sandbox (`underscore` en `wiki`, `vm2` en `apache-superset`) tienen severidad crítica y exploits documentados (GHSA). La exposición depende de si el software está expuesto a internet, pero el impacto potencial es compromiso total del servidor host.
+3. **Prioridad 3 (Media) — Inyecciones en código fuente (Vector 1):** La inyección SQL en Gitea (`milestone_list.go`) tiene severidad media porque el ORM previene SQLi clásico; sin embargo, la omisión en la validación de comodines puede derivar en DoS por agotamiento de recursos. Requiere parche pero no detiene operaciones.
+4. **Prioridad 4 (Media) — Postura de gobernanza (Vector 3):** La ausencia de Dependabot y CODEOWNERS no es una vulnerabilidad explotable directamente, pero es la causa raíz que permite la acumulación de deuda técnica (demostrado en `wiki`). Se aborda después de los riesgos activos, pero es transversal a toda la organización.
+5. **Prioridad 5 (Baja) — Fallos aislados (Vector 1):** Vulnerabilidades tipo ReDoS que solo resultan en caídas de servicio a nivel cliente, o vulnerabilidades presentes únicamente en herramientas de prueba (`devDependencies`). Bajo impacto operacional y sin evidencia de explotación activa.
 
 ## 6. Acciones propuestas (Plan de remediación global)
 
@@ -131,7 +135,8 @@ Proteger la cadena de suministro de software requiere un enfoque tridimensional.
 Este proyecto utiliza y modifica scripts originales proporcionados para esta actividad académica, cuyos derechos de autor pertenecen a fastai (2022) bajo la Licencia Apache 2.0.
 
 **Modificaciones y aportes realizados en este repositorio:**
-* Creación del entorno de ejecución interactivo (`scripts/vulnerability_analysis.ipynb`).
-* Modificación de los scripts base (`add_submodales.py`, `generate_codeql.py`, `generate_grype.py`, `generate_sboms.py`) para integrar un sistema de salida y registro de logs (`*.log`).
-* Actualización del archivo `/data/repos.json` con la selección de los 9 repositorios Open Source analizados.
-* Generación de toda la documentación de auditoría, directorios de evidencia (`evidence/`) y resultados crudos (`results/`).
+
+- Creación del entorno de ejecución interactivo (`scripts/vulnerability_analysis.ipynb`).
+- Modificación de los scripts base (`add_submodules.py`, `generate_codeql.py`, `generate_grype.py`, `generate_sboms.py`) para integrar un sistema de salida y registro de logs (`*.log`).
+- Actualización del archivo `/data/repos.json` con la selección de los 9 repositorios Open Source analizados.
+- Generación de toda la documentación de auditoría, directorios de evidencia (`evidence/`) y resultados crudos (`results/`).
