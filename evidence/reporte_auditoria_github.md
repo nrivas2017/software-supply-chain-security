@@ -421,6 +421,12 @@ Ejecutar por cada workflow:
 
 Herramientas recomendadas: [**pin-github-action**](https://github.com/mheap/pin-github-action) o Dependabot con `github-actions` ecosystem.
 
+> **Interpretación de contexto (no es una receta universal).** Fijar a SHA tiene un costo de mantenimiento real y aplicarlo a ciegas puede ser contraproducente:
+>
+> 1. **Prerrequisito: automatización de actualizaciones.** Sin Dependabot/Renovate, un SHA fijo **congela** la acción en un commit que dejará de recibir parches — es _peor_ que un tag mutable. El orden correcto es: primero el bot, después el pinning. En este corpus, 5 de 9 repos no tienen Dependabot, así que para ellos el pinning masivo no debería ser el primer paso.
+> 2. **Priorizar por riesgo.** El mayor valor está en pinnear las **Actions de terceros / no oficiales** (p. ej. `Requarks/changelog-action`, `appleboy/telegram-action`, `actions-rs/toolchain`), que son el vector real de compromiso. Para Actions oficiales de proveedores confiables (`actions/*`, `docker/*`, `github/codeql-action`), aceptar _tags_ de versión mayor es una decisión razonable para no inflar el mantenimiento.
+> 3. **El costo se traslada, no desaparece.** Dependabot/Renovate convierten cada actualización en un PR que alguien debe revisar y mergear; en equipos sin esa capacidad de triage, el pinning genera ruido que termina ignorándose. La recomendación debe ponderar la madurez del equipo y su modelo de amenazas.
+
 ### Para V2.1 — Agregar bloque `permissions:`
 
 Añadir al inicio de cada workflow como mínimo:
